@@ -35,7 +35,7 @@
             $this -> email = $email;
         }
 
-        public function __construct($id_Kh, $ten_kh, $taikhoan, $matkhau, $sdt, $diachi, $email)
+        public function __construct($id_kh, $ten_kh, $taikhoan, $matkhau, $sdt, $diachi, $email)
         {
             $this -> id_kh = $id_kh;
             $this -> ten_kh = $ten_kh;

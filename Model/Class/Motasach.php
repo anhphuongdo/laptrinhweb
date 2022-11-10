@@ -6,7 +6,7 @@
         public function get_id_sach() {return $this -> id_sach;}
         public function get_mota() {return $this -> mota;}
 
-        public function set_mota() {
+        public function set_mota($mota) {
             $this -> mota = $mota;
         }
 
