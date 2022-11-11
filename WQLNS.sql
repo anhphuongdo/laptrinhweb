@@ -23,7 +23,7 @@ create table Khachhang(
 id_kh char(5) PRIMARY KEY,
 ten_kh nvarchar(100) not null,
 taikhoan nvarchar(100) not null,
-matkhau nvarchar(20) not null,
+matkhau varchar(30) not null,
 sdt char(10) not null,
 diachi nvarchar(100) not null,
 email Text
