@@ -22,7 +22,6 @@ mota NVARCHAR(max)
 create table Khachhang(
 id_kh char(5) PRIMARY KEY,
 ten_kh nvarchar(100) not null,
-taikhoan nvarchar(100) not null,
 matkhau varchar(30) not null,
 sdt char(10) not null,
 diachi nvarchar(100) not null,
@@ -244,11 +243,11 @@ insert into Sach VALUEs ('SP089',N'Luyện Thi HSK Cấp Tốc (Cấp 1-2) (Kèm
 insert into Sach VALUEs ('SP090',N'Luyện Thi HSK Cấp Tốc (Cấp 3-4) (Kèm CD)','TL006','TG000','NCC17',180000,20,'https://nhasachphuongnam.com/images/thumbnails/500/500/detailed/148/luyen-thi-hsk-cap-toc-cap-3-4.jpg')
 
 ------------------------------------
-insert into Khachhang VALUEs ('KH001',N'Nguyễn Văn A', 'nguyenvana', '12345678', '0123456789', 'Hà Giang', 'nva@gmail.com')
-insert into Khachhang VALUEs ('KH002',N'Nguyễn Văn B', 'nguyenvanb', '12345678', '0289999999', 'Hà Nội', 'nvb@gmail.com')
-insert into Khachhang VALUEs ('KH003',N'Đỗ Thị Phương Anh', 'dtpa', '12345678', '0335991355', 'Thanh Hóa', 'anhdo@gmail.com')
-insert into Khachhang VALUEs ('KH004',N'Nông Thảo Hiền', 'nth', '12345678', '0333333333', 'Tiền Giang', 'hiennong@gmail.com')
-insert into Khachhang VALUEs ('KH005',N'Đặng Thị Kim Ngân', 'dtkn', '12345678', '0555555555', 'TP.HCM', 'ngandang@gmail.com')
+insert into Khachhang VALUEs ('KH001',N'Nguyễn Văn A','12345678', '0123456789', 'Hà Giang', 'nva@gmail.com')
+insert into Khachhang VALUEs ('KH002',N'Nguyễn Văn B','12345678', '0289999999', 'Hà Nội', 'nvb@gmail.com')
+insert into Khachhang VALUEs ('KH003',N'Đỗ Thị Phương Anh','12345678', '0335991355', 'Thanh Hóa', 'anhdo@gmail.com')
+insert into Khachhang VALUEs ('KH004',N'Nông Thảo Hiền','12345678', '0333333333', 'Tiền Giang', 'hiennong@gmail.com')
+insert into Khachhang VALUEs ('KH005',N'Đặng Thị Kim Ngân', '12345678', '0555555555', 'TP.HCM', 'ngandang@gmail.com')
 
 ------------------------------------
 insert into Donhang VALUEs ('DH001', 'KH001', 'SP001', 2, '2022/10/30')
