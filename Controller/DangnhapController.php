@@ -1,13 +1,16 @@
 <?php
+    session_start();
+
     require_once("Model/Getcustomer.php");
+    require_once("db_module.php");
 
-    class DangnhapController{
-        public $model;
+    $link = NULL;
+    taoKetNoi($link);
 
-        public function __constrcut() {}
-
-        public function invoke(){
-            if($_GET[])
-        }
+    if(isset($_POST['email']) && isset($_POST['matkhau']))
+    {
+        if(signin($link, $_POST["email"], $_POST["matkhau"])) header("Location: userprofile .php");
+        else header("Location: signin.php?msg=login-fail");
     }
+    else header("Location: signin.php");
 ?>

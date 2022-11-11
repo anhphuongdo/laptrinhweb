@@ -19,11 +19,14 @@
         "Motasach",
         "Phong",
         "sach",
+        "signin",
         "soluong",
         "tacgia",
         "theloai",
         "theotheloai",
         "thoigian",
-        "Truy"
+        "Truy",
+        "unvalid",
+        "userprofile"
     ]
 }

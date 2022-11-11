@@ -14,15 +14,13 @@
         $valid = $valid&&validateLenUP($_POST['matkhau']);
         if($valid)
         {
-            if(existsEmail($link, $_POST['email']))
+            if(existsEmail($link, $_POST['email'])) header("Location: signup.php?msg=duplicate&email=".$_POST['email']);
+            else
             {
-                giaiPhongBoNho($link, true);
-                header("Location: dangki.php?msg=duplicate&email=".$_POST['email']);
+                signup($link,$_POST["ten_kh"], $_POST["email"], $_POST["matkhau"], $_POST["sdt"], $_POST["diachi"]);
+                header("Location: signup.php?msg=done");
             }
         }
-        else
-        {
-            
-        }
+        else header("Location: signup.php?msg=unvalid-data&email=".$_POST('email'));
     }
 ?>
