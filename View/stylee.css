@@ -181,7 +181,6 @@
       transition: all 0.5s ease 0s;
       width:130px;
 
-
   }
   .pro-sale{
       position: absolute;
@@ -200,7 +199,7 @@
   }
   .pro-btn 
   {
-      width: 100%;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -242,15 +241,13 @@
       z-index: 1;
       transition: all ease 0.5s;
   }
-  .suggestedimage 
-  {
-    padding-left: 60%;
-  }
+
   /* footer */
   .footer{
     background-color: rgb(7, 7, 7) !important;
     color: rgb(255, 255, 255);
-    position: static;
+    position: relative;
+    top:40px;
   }
   /*Detail product*/
   .product-detail-wrapper {
@@ -1141,4 +1138,231 @@ button.btn-addtocart:active {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+}
+
+
+/* Trang tim kiem */ 
+.product-gallery{
+  position:relative;
+  top:40px;
+  padding: 40px 40px 40px 40px;
+
+}
+.card1 {
+  width: 80%;
+}
+
+.page-title {
+  height: 50px;
+}
+
+.pro-imgg{
+  transition: all 0.5s ease 0s;
+  position:static;
+  padding-top: 20px;
+}
+.pro-imggg {
+  width:80%;
+  height:270px;
+}
+.pro-imgg:hover .pro-btn{
+  z-index: 2;
+  visibility: visible;
+  opacity: 0.7;
+  left: 10%;
+  bottom: 10%;
+}
+.image-item {
+  text-align: center;
+}
+.content {
+  text-align: center;
+  position:static;
+  padding-top: 10px;
+}
+.price-item{
+  font-size: 17px;
+  font-weight: 700;
+  color:red;
+}
+.name-item{
+  color:black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.row2 {
+  position:static;
+  padding-top: 30px;
+}
+.page-title {
+  width:100%;
+  height:80px;
+}
+p.gallery-title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/* Trang thong bao don hang dat thanh cong */ 
+.logo1 {
+  width: 200px;
+  height: 200px;
+
+}
+.confirm {
+  width:100%;
+  position: static;
+  padding-top: 50px;
+  text-align:center;
+
+}
+.titlee {
+  font-size: 50px;
+  font-weight:300;
+  text-align: center;
+}
+.imgc {
+  width: 400px;
+  height:300px;
+}
+
+button.view-order,
+button.backtoindex {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor:pointer;
+  box-shadow: none;
+  padding: 15px 25px;
+  width: 200px;
+  margin-bottom: 15px;
+  box-shadow:0 6px #999;
+  color: white;
+  border-radius:10px;
+}
+
+button.view-order {
+  background-color: #f44336;
+}
+button.view-order:hover {
+  background-color: #bc251a;
+}
+button.view-order:active {
+  background-color: #bc251a;
+  box-shadow:0 3px #666;
+  transform:translateY(4px);
+}
+button.backtoindex {
+  background-color: #04AA6D;
+
+}
+button.backtoindex:hover {
+  background-color: #07754d;
+}
+button.backtoindex:active {
+  background-color: #07754d;
+  box-shadow:0 3px #666;
+  transform:translateY(4px);
+}
+.button1 {
+position:absolute;
+right: 100px;
+}
+.buttonx {
+  position:static;
+  padding-top:50px;
+}
+
+/* My order */
+.myorders {
+  position:static;
+  padding-top:10px;
+ 
+}
+.headd {
+width:70%;
+}
+.content-cart {
+display:flex;
+align-items: center;
+justify-content: center;
+width:100%;
+}
+.myorders {
+  background-color: #f4e5d9;
+}
+
+.titleofpage {
+  position:static;
+  padding-top:70px;
+
+}
+.titlee{
+  font-size: 30px;
+  font-weight:600;
+}
+p.dateoforder {
+margin-left: 10px;
+font-size: 20px;
+font-weight: 600;
+
+}
+p.stateoforder {
+  margin-left: 40%;
+  font-size: 20px;
+  font-weight: 600;
+  color:#027030;
+}
+
+.itemm {
+  width:100%;
+
+}
+.picofitem{
+  margin-top:10px;
+  float:right;
+  margin-bottom:10px;
+} 
+p.nameofitem {
+  margin-top:10px;
+  margin-left: 0 ;
+  font-size:20px;
+  font-weight:300;
+}
+p.quantityofitem {
+  font-size:20px;
+  font-weight:200;
+}
+p.priceofitem{
+  font-size:20px;
+  font-weight:300;
+  margin-top:50px;
+  align-content:center;
+}
+p.inforr {
+  font-size: 12px;
+  color:#84817b;
+  margin-left: 10px;
+  position:relative;
+  top:-10px;
+}
+p.tcont, p.tvalue {
+  font-size: 20px;
+  font-weight:600;
+  margin-left:10px;
+  margin-top:10px;
+}
+.valuee {
+  align-content:center;
+}
+#or2 {
+  position:static;
+  padding-top:70px;
+}
+p#stateoforder2 {
+  color:rgb(144, 46, 46);
 }
