@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 12, 2022 lúc 06:34 PM
+-- Thời gian đã tạo: Th10 12, 2022 lúc 10:52 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -409,10 +409,7 @@ INSERT INTO `theloai` (`id_theloai`, `ten_theloai`) VALUES
 ('TL003', 'Văn học nước ngoài'),
 ('TL004', 'Sách học tiếng Anh'),
 ('TL005', 'Sách học tiếng Hàn'),
-('TL006', 'Sách học tiếng Trung'),
-('TL007', 'Bút'),
-('TL008', 'Máy tính'),
-('TL009', 'Balo');
+('TL006', 'Sách học tiếng Trung');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -475,6 +472,12 @@ ALTER TABLE `theloai`
 ALTER TABLE `donhang`
   ADD CONSTRAINT `FK_DH_KH` FOREIGN KEY (`id_kh`) REFERENCES `khachhang` (`id_kh`),
   ADD CONSTRAINT `FK_DH_SP` FOREIGN KEY (`id_sach`) REFERENCES `sach` (`id_sach`);
+
+--
+-- Các ràng buộc cho bảng `motasach`
+--
+ALTER TABLE `motasach`
+  ADD CONSTRAINT `FK_MT_SP` FOREIGN KEY (`id_sach`) REFERENCES `sach` (`id_sach`);
 
 --
 -- Các ràng buộc cho bảng `sach`
