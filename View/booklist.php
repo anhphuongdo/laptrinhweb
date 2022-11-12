@@ -115,7 +115,7 @@
                               </svg></a>
                               </div>
                         </div>
-                        <div class="content" id="content1">
+                                <div class="content" id="content1">
                           <p class="name-item" id="name-item1">Abc</p>
                         <p class="price-item" id="price-item1">1,050,000đ </p>
                           </div>

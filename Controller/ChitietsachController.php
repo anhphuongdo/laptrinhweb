@@ -9,7 +9,7 @@
         public function invoke()
         {
             $book = getbook("nd");
-            include "view/index.php";
+            include "View/index.php";
         }
     }
 ?>

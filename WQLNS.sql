@@ -1,7 +1,4 @@
 ﻿create database WQLNS
-GO
-use WQLNS
-GO
 
 create table Sach(
 id_sach char(5) PRIMARY KEY,
