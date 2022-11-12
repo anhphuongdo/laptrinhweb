@@ -1,6 +1,6 @@
 <?php
     define ("HOST", "localhost");
-    define("DB", "WQLNS");
+    define("DB", "wqlns");
     define("USER", "root");
     define("PASSWORD", "");
 ?>

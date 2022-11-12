@@ -33,18 +33,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="../View/index.php">TRANG CHỦ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?">SÁCH KINH TẾ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#">SÁCH HỌC NGOẠI NGỮ</a>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
-                                <a href="#">ANH</a>
-                                <a href="#">HÀN</a>
-                                <a href="#">NHẬT</a>
+                                <a href="../View/booklist.php?nd=sachAnh">ANH</a>
+                                <a href="../View/booklist.php?nd=sachHan">HÀN</a>
+                                <a href="../View/booklist.php?nd=sachNhat">NHẬT</a>
                             </div>
                         </li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#"> SÁCH VĂN HỌC</a>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php"> SÁCH VĂN HỌC</a>
                             <div class="dropdown-menu">
-                                <a href="#"> VIỆT NAM</a>
-                                <a href="#"> NƯỚC NGOÀI</a>
+                                <a href="../View/booklist.php/vhVietNam"> VIỆT NAM</a>
+                                <a href="../View/booklist.php/vhnuocngoai"> NƯỚC NGOÀI</a>
                             </div>
                         </li>
                     </ul>
@@ -62,7 +62,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="../View/booklist.php" title="Tìm kiếm" onClick="showsearchbar()">
+                            <a href="../View/booklist.php?nd=" title="Tìm kiếm" onClick="showsearchbar()">
                                 <span class="material-symbols-outlined" style="color:black">search</span>
                             </a>
                         </li>
