@@ -34,7 +34,6 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="../View/index.php">TRANG CHỦ</a></li>
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?">SÁCH KINH TẾ</a></li>
-
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
                                 <a href="#">ANH</a>
