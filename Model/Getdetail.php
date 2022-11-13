@@ -1,7 +1,7 @@
 <?php
-    require_once("Model/Class/Sach.php");
-    require_once("Model/Class/Motasach.php");
-    require_once("db_module.php");
+    require_once("../Model/Class/Sach.php");
+    require_once("../Model/Class/Motasach.php");
+    require_once("../db_module.php");
 
     function getdetailbook(){
         $link = null;

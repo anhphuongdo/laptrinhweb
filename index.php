@@ -4,7 +4,7 @@
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../stylee.css">
+    <link rel="stylesheet" href="stylee.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -32,19 +32,19 @@
                 <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="../View/index.php">TRANG CHỦ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php">SÁCH HỌC NGOẠI NGỮ</a>
+                        <li class="nav-item active"><a class="nav-link" href="index.php">TRANG CHỦ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="View/booklist.php">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
-                                <a href="../View/booklist.php?nd=sachAnh">ANH</a>
-                                <a href="../View/booklist.php?nd=sachHan">HÀN</a>
-                                <a href="../View/booklist.php?nd=sachNhat">NHẬT</a>
+                                <a href="View/booklist.php?nd=sachAnh">ANH</a>
+                                <a href="View/booklist.php?nd=sachHan">HÀN</a>
+                                <a href="View/booklist.php?nd=sachNhat">NHẬT</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php"> SÁCH VĂN HỌC</a>
                             <div class="dropdown-menu">
-                                <a href="../View/booklist.php/vhVietNam"> VIỆT NAM</a>
-                                <a href="../View/booklist.php/vhnuocngoai"> NƯỚC NGOÀI</a>
+                                <a href="View/booklist.php/vhVietNam"> VIỆT NAM</a>
+                                <a href="View/booklist.php/vhnuocngoai"> NƯỚC NGOÀI</a>
                             </div>
                         </li>
                     </ul>
@@ -52,17 +52,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href=".../View/signin.php" title="Tài khoản">
+                            <a href="View/signin.php" title="Tài khoản">
                                 <span class="material-symbols-outlined" style="color:black">person</span>
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="../View/shoppingcart.php" title="Giỏ hàng">
+                            <a href="View/shoppingcart.php" title="Giỏ hàng">
                                 <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="../View/booklist.php?nd=" title="Tìm kiếm" onClick="showsearchbar()">
+                            <a href="View/booklist.php?nd=" title="Tìm kiếm" onClick="showsearchbar()">
                                 <span class="material-symbols-outlined" style="color:black">search</span>
                             </a>
                         </li>
@@ -126,8 +126,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>
@@ -138,7 +136,7 @@
                         </div>
                     </div>
                     <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
+                        <h3 class='pro-name'><a href="#">get_ten_sach(</a></h3>
                         <div class='pro-price'>
                             <p class='pro-price sale'>1,050,000đ
                                 <span class='pro-price-retail'><del>1,500,000₫</del></span>
@@ -238,8 +236,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>
@@ -350,8 +346,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>
@@ -377,7 +371,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>
@@ -403,7 +396,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>
@@ -429,7 +421,6 @@
                             <a href="#">
                                 <img class='pro-img pro-img-1' src="image/vimo.jpg">
                                 <img class='pro-img ' src="image/vimo.jpg">
-
                             </a>
                         </div>
                         <div class='pro-btn d-flex'>

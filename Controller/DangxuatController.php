@@ -2,7 +2,7 @@
     session_start();
 
     require_once("db_module.php");
-    require_once("Model/Getcustomer.php");
+    require_once("../Model/Getcustomer.php");
 
     $link = NULL;
     taoKetNoi($link);

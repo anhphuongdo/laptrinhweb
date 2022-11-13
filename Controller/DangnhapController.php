@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require_once("Model/Getcustomer.php");
+    require_once("../Model/Getcustomer.php");
     require_once("db_module.php");
 
     $link = NULL;

@@ -1,7 +1,7 @@
 <?php 
-    require_once("Model/Class/Sach.phpSach.php");
-    require_once("Model/Class/Theloai.php");
-    require_once("db_module.php");
+    require_once("../Model/Class/Sach.php");
+    require_once("../Model/Class/Theloai.php");
+    require_once("../db_module.php");
     
     function getallbooklist(){
             $link = null;
@@ -22,7 +22,7 @@
             $result = chayTruyVanTraVeDL($link, "select *
                                                 from sach inner join theloai
                                                 on sach.id_theloai = theloai.id_theloai
-                                                where ten_theloai = ".$ten_theloai."");
+                                                where 'ten_theloai' = ".$ten_theloai."");
             $data = array();
             while($rows = mysqli_fetch_assoc($result))
             {

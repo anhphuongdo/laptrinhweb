@@ -3,7 +3,7 @@
     <title>Trang chủ</title> 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="stylee.css">
+      <link rel="stylesheet" href="../stylee.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -35,7 +35,7 @@
             <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
             <div class="collapse navbar-collapse" id = "navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href ="../View/index.php">TRANG CHỦ</a></li>
+                <li class="nav-item active"><a class="nav-link" href ="../index.php">TRANG CHỦ</a></li>
                 <li class="nav-item active dropdown"><a class="nav-link drop-btn" href ="../View/booklist.php?nd=sachkt" >SÁCH KINH TẾ</a></li>
 
                 <li class="nav-item active dropdown"><a class="nav-link drop-btn" href ="../View/booklist.php" >SÁCH HỌC NGOẠI NGỮ</a>
@@ -134,7 +134,7 @@
                        
                     </div>
                     <div class="backto">
-                      <a href="../View/index.html"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
+                      <a href="../index.html"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
                     </div>
                 </form>
             </div>

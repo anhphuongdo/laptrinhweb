@@ -30,11 +30,11 @@
     </div>
     <div class="menu" id="action-menu">
       <nav class="navbar navbar-expand navbar-light sticky-top">
-        <a class="navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115" /></a>
+        <a class="navbar-brand" href="../index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115" /></a>
         <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="../View/index.php">TRANG CHỦ</a></li>
+            <li class="nav-item active"><a class="nav-link" href="../index.php">TRANG CHỦ</a></li>
             <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
 
             <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../">SÁCH HỌC NGOẠI NGỮ</a>
@@ -109,9 +109,34 @@
                     <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
                   </svg></a>
               </div>
+              <?php
+              require_once("../Controller/DanhsachController.php");
+              $controller = new DanhsachController();
+              $controller->invoke();
+
+              echo"<div class='content' id='content1'>
+              <p class='name-item' id='name-item1'>".$book->get_tensach()."</p>
+              <p class='price-item' id='price-item1'>".$book->get_giatien()."</p>
             </div>
-            <div class="content" id="content1">
-              <p class="name-item" id="name-item1">Abc</p>
+          </div>
+        </div>";
+        echo"
+        <div class='col-sm-6 col-md-6 col-lg-3 products-list'>
+          <div class='card card1' id='item-2' href='detailproduct.html'>
+            <div class='pro-imgg'>
+              <div class='image-item' id='image-item2'>
+                <a href='#'>
+                  <img class='pro-imggg' src='".$book->get_hinhanh()."'>
+                </a>
+              </div>
+              "
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="content" id="content1">
+              <p class="name-item" id="name-item1"></p>
               <p class="price-item" id="price-item1">1,050,000đ </p>
             </div>
           </div>
@@ -132,7 +157,7 @@
                   </svg></a>
               </div>
             </div>
-            
+
             <div class="content" id="content2">
               <p class="name-item" id="name-item2">Abc</p>
               <p class="price-item" id="price-item2">1,050,000đ </p>
@@ -272,10 +297,9 @@
               <p class="price-item" id="price-item8">1,050,000đ </p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
     </div>
-
+  </div>
   </div>
   </div>
 

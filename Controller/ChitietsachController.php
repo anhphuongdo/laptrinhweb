@@ -1,5 +1,5 @@
 <?php
-    require_once("Model/Getdetail.php");
+    require_once("../Model/Getdetail.php");
 
     class ChitietsachController{
         public $model;

@@ -96,8 +96,6 @@
                 return number_format($sum);
             }
         }
-
-        
     }
 
 ?>

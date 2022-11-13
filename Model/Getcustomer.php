@@ -1,7 +1,7 @@
 <?php
-    require_once("Model/Class/Khachhang.php");
-    require_once("Model/Class/Donhang.php");
-    require_once("db_module.php");
+    require_once("../Model/Class/Khachhang.php");
+    require_once("../Model/Class/Donhang.php");
+    require_once("../db_module.php");
 
     function signup($link, $ten_kh, $email, $matkhau, $sdt, $diachi)
     {

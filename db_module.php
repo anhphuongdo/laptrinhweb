@@ -1,9 +1,11 @@
 <?php
     require_once "config.php";
-    function taoKetNoi($link)
+    
+    function taoKetNoi(&$link)
     {
         $link = mysqli_connect(HOST, USER, PASSWORD, DB);
-        if(mysqli_connect_error()){
+        if(mysqli_connect_error())
+        {
             echo "Lỗi kết nối đến máy chủ" . mysqli_connect_error();
             exit();
         }
@@ -28,6 +30,8 @@
             mysqli_close($link);
             mysqli_free_result($result);
         }
-        catch (TypeError $e){}
+        catch (TypeError $e){
+            echo "ERROR: " . $e->getMessage();
+        }
     }
 ?>
