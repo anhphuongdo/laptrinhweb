@@ -1,16 +1,33 @@
 <?php
-    session_start();
+    include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getcustomer.php")
+?>
+<?php 
+    class UserController {
+        public $model;
+        public function __construct() {
+            $this->model = new UserModel();
+        }
 
-    require_once("../Model/Getcustomer.php");
-    require_once("db_module.php");
+        public function login_ctl($email, $matkhau) {
+            $data = $this->model->login($email, $matkhau);
+            if(isset($data))
+                 /* header("Location: ./index.php"); */
+                 //include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/index.php";
+                { var_dump(is_dir($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/index.php")); exit;}
+            else 
+                include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/signin.php";
+        }
 
-    $link = NULL;
-    taoKetNoi($link);
+       /*  public function getInfoAdmin($email, $matkhau) {
+            $data = $this->model->getUser($email, $matkhau);
+            include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/.php";
+        } */
 
-    if(isset($_POST['email']) && isset($_POST['matkhau']))
+    /* if(isset($_POST['email']) && isset($_POST['matkhau']))
     {
         if(signin($link, $_POST["email"], $_POST["matkhau"])) header("Location: userprofile .php");
         else header("Location: signin.php?msg=login-fail");
     }
-    else header("Location: signin.php");
+    else header("Location: signin.php"); */
+}
 ?>

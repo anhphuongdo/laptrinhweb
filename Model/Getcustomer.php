@@ -1,31 +1,35 @@
 <?php
-    require_once("../Model/Class/Khachhang.php");
-    require_once("../Model/Class/Donhang.php");
-    require_once("../db_module.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Class/Khachhang.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/db_module.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Validate.php");
 
-    function signup($link, $ten_kh, $email, $matkhau, $sdt, $diachi)
-    {
-        chayTruyVanKhongTraVeDL($link, "insert into Khachhang values (NULL,".$ten_kh.", ".mysqli_real_escape_string($link, $email).", ".md5($matkhau).", ".$sdt.", ".$diachi."");
-    }
-
-    function signin($link, $email, $matkhau)
-    {
-        $result = chayTruyVanTraVeDL($link, "select count(*) from Khachhang where email=".mysqli_real_escape_string($link, $email)." and matkhau = ".md5($matkhau)."");
-        $row = mysqli_fetch_row($result);
-        mysqli_free_result($result);
-        if($row[0]>0){
-            $_SESSION['email'] = $email;
-            return true;
+    class UserModel {
+        public function login($email, $matkhau){
+            $result = NULL;
+            $link = NULL;
+            taoKetNoi($link);
+            $query = "SELECT count(*) from khachhang WHERE `email` = '$email' AND `matkhau` = '$matkhau'";
+            $result = chayTruyVanTraVeDL($link, $query);
+            $rows = mysqli_fetch_row($result);
+            if($rows[0]>0) return true;
+            else return false;
         }
-        else return false;
-    }
-
-    function logout(){
-        if(isset($_SESSION['email']))
-        {
-            unset($_SESSION['email']);
-            return true;
+        public function signup($ten_kh, $email, $matkhau, $sdt, $diachi) {
+            $result = NULL;
+            $link = NULL;
+            taoKetNoi($link);
+            if(existsEmail($link, $email)) {
+                giaiPhongBoNho($link, true);
+                return false;
+            }else {
+                $matkhau = md5($matkhau);
+                $email = mysqli_real_escape_string($link, $email);
+                $query = "INSERT INTO `khachhang` (`ten_kh`, `matkhau`, `sdt`,'diachi', `email)
+                VALUES ('$ten_kh', '$matkhau', '$sdt', '$diachi', '$email'";
+                $setuser = chayTruyVanKhongTraVeDL($link, $query);
+                if($setuser) return true;
+                else return false;
         }
-        else return false;
-    }
+    }   
+}
 ?>

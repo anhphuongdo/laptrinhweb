@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href="View/signin.php" title="Tài khoản">
+                            <a href="../View/signin.php" title="Tài khoản">
                                 <span class="material-symbols-outlined" style="color:black">person</span>
                             </a>
                         </li>

@@ -3,7 +3,7 @@
     <title>Trang chủ</title> 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="../stylee.css">
+      <link rel="stylesheet" href="../style/wqlnsstyle.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -11,10 +11,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-      <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <link rel="stylesheet" href="plugins/uikit/uikit.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
 
 </head>
 <body>
@@ -31,7 +28,7 @@
         </div>
         <div class="menu" id="action-menu">
             <nav class="navbar navbar-expand navbar-light sticky-top">
-            <a class = "navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115"/></a>
+            <a class = "navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="115"/></a>
             <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
             <div class="collapse navbar-collapse" id = "navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -92,7 +89,7 @@
             <div class="row signup">
                 <div class="col-md-6 col-xs-12 col-sm-12 signin-left">
                     <div class="logobrand">
-                        <img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="225"/>
+                        <img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="225"/>
                     </div>
                     <div class="sign-title">
                         <h1>Tạo tài khoản</h1>
@@ -107,18 +104,6 @@
                     <div class="phonen-number form-control1">
                         <input type="text" id="Phone-number" placeholder="Số điện thoại">
                     </div>
-                    <div class="sex form-control1">
-                       <div class="female">
-                         
-                          <input type="radio" id="female" checked  name="sex">
-                          <label for="female">Nữ</label>
-                       </div>
-                       <div class="male">
-                        
-                        <input type="radio" id="male"  name="sex">
-                        <label for="male" >Nam</label>
-                     </div>
-                    </div>
                     <div class="birthday form-control1">
                         <input type="text" id="birthday" placeholder="mm/dd/yyyy">
                     </div>
@@ -129,12 +114,10 @@
                         <input type="password"  id="password" placeholder="Password">
                     </div>
                     <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
-                    <div class="submit">
-                      <p>Đăng kí</p>
-                       
-                    </div>
+                    <input type="submit" class="submit" value="Đăng ký" name="submit">
                     <div class="backto">
                       <a href="../index.html"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
+                    </div>
                     </div>
                 </form>
             </div>
