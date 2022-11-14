@@ -12,4 +12,4 @@
             include "../LaptrinhWeb/View/index_view.php";
         }
     }
-?>
+?> 

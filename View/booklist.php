@@ -85,7 +85,7 @@
       $controller = new DanhsachController();
       $controller->invoke();
       ?>
-    </div>
+    </div> 
     <div class="row product-list">
       <?php
       require_once("../Controller/DanhsachController.php");

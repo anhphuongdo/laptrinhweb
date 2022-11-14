@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+    <script src="../java.js"></script>
 </head>
 
 <body>
@@ -79,61 +80,11 @@
                 <div class="cod-md-12 col-sm-12 col-xs-12 ">
                     <div class="row product-detail-main">
                         <div class="col-md-1 col-sm-12 col-xs-12" id="blank2"></div>
-                        <div class="col-md-4 col-sm-12 col-xs-12 image" id="mainimage">
-                            <img title="Kinh tế vi mô" alt="KTVM" src="../image/vimo.jpg" class="center" width=420px height=600px>
-
-                        </div>
-
-                        <div class="col-md-6 col-sm-12 col-xs-12 product-content" id="detailproduct">
-                            <div class="product-content-1">
-                                <div class="product-title">
-                                    <h1>Kinh tế học vi mô</h1>
-                                    <span id="ID">ID: KTHVM</span>
-                                </div>
-                                <div class="product-price" id="price-priview"><span class="pro-price">240,000 VNĐ</span></div>
-                                <form id="add-item-form" action="/card/add" method="post" class="variants clearfix">
-                                    <div class="select-actions">
-                                        <div class="center1">
-                                            <p></p>
-                                            <p>
-                                            </p>
-                                            <div class="buttons_added">
-                                                <input class="minus is-form" type="button" value="-">
-                                                <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
-                                                <input class="plus is-form" type="button" value="+">
-                                            </div>
-                                            <p></p>
-                                        </div>
-                                        <div class="wrap-addcart clearfix">
-                                            <div class="row-flex">
-                                                <div class="col-xs-6 col-md-6">
-                                                    <button type="button" class="button btn-addtocart addtocart-modal">Add to cart</button>
-                                                </div>
-                                                <div class="col-xs-6 col-md-6">
-                                                    <button type="button" class="buy-now button" style="display: block;">Buy now</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="product-description">
-                                    <div class="title">
-                                        <h2>Mô tả sản phẩm</h2>
-                                    </div>
-                                    <div class="description-content">
-                                        <div class="description-productdetail">
-                                            <p><span>"Kinh tế vi mô" trình bày về những vấn đề cơ bản về kinh tế học, cầu, cung và giá thị trường, lý thuyết lựa chọn của người tiêu dùng, lý thuyết về sản xuất và chi phí, thị trường cạnh tranh hoàn toàn, Với các bạn chuyên ngành Kinh tế thì đây là tài liệu tham khảo hữu ích.</span><br></p>
-                                            <ul>
-                                                <li>Nhà xuất bản: ThS.Trần Thị Bích Dung</li>
-                                                <li>Nhà xuất bản: ThS.Trần Bá Thọ</li>
-                                                <li>Năm xuất bản: 2019</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        ?>
                         <div class="col-md-1 col-sm-12 col-xs-12" id="blank2"></div>
+                        <?php
+                        ?>
                     </div>
                 </div>
             </div>
