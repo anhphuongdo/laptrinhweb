@@ -141,9 +141,9 @@
   }
   .view{
     text-decoration: underline;
-    text-align: right;
+    margin-left:50%;
     font-weight: bold;
-    padding-right: 5%;
+    color:red;
   }
   .view:hover{
     color: darkgoldenrod;

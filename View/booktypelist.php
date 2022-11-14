@@ -2,7 +2,7 @@
     <body>
         <?php
         foreach($types as $type){
-            if($type -> get_ten_theloai() == $name){
+            if($type -> get_ten_theloai() == $name || $type -> get_id_theloai() == $name){
                 $id = $type -> get_id_theloai();
             }
         }

@@ -17,36 +17,25 @@
 
 <body>
   <div class="container-fluid">
-    <div class="header">
-      <div class="row text-center cursive">
-        <div class="col text-center">
-          Welcome to The A.N.H Bookshop!
-          <a href="#" class="has-text-action-primary" style="font-weight:bold">
-            <u>Learn more here!</u>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="menu" id="action-menu">
-      <nav class="navbar navbar-expand navbar-light sticky-top">
-        <a class="navbar-brand" href="../index.php"><img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="115" /></a>
+    <div class="menu default_font" id="action-menu">
+      <nav class="navbar navbar-expand navbar-light fixed-top">
+        <a class="navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="115" /></a>
         <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="../index.php">TRANG CHỦ</a></li>
-            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
-
-            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../">SÁCH HỌC NGOẠI NGỮ</a>
+            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="booklist.php?tl=TL001">SÁCH KINH TẾ</a></li>
+            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="booklist.php?tl=2">SÁCH HỌC NGOẠI NGỮ</a>
               <div class="dropdown-menu">
-                <a href="../View/booklist.php?nd=sachAnh">ANH</a>
-                <a href="../View/booklist.php?nd=sachHan">HÀN</a>
-                <a href="../View/booklist.php?nd=sachNhat">NHẬT</a>
+                <a href="booklist.php?tl=TL004">ANH</a>
+                <a href="booklist.php?tl=TL005">HÀN</a>
+                <a href="booklist.php?tl=TL006">NHẬT</a>
               </div>
             </li>
-            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../"> SÁCH VĂN HỌC</a>
+            <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?tl=5"> SÁCH VĂN HỌC</a>
               <div class="dropdown-menu">
-                <a href="../View/booklist.php?nd=vhVietNam"> VIỆT NAM</a>
-                <a href="../View/booklist.php?nd=vhnuocngoai"> NƯỚC NGOÀI</a>
+                <a href="booklist.php?tl=TL002"> VIỆT NAM</a>
+                <a href="booklist.php?tl=TL003"> NƯỚC NGOÀI</a>
               </div>
             </li>
           </ul>
@@ -54,17 +43,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="../View/signin.php" title="Tài khoản">
+              <a href="./signin.php" title="Tài khoản">
                 <span class="material-symbols-outlined" style="color:black">person</span>
               </a>
             </li>
             <li class="nav-item active">
-              <a href="../View/shoppingcart.php" title="Giỏ hàng">
+              <a href="./shoppingcart.php" title="Giỏ hàng">
                 <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
               </a>
             </li>
             <li class="nav-item active">
-              <a href="../View/booklist.php?nd=" title="Tìm kiếm" onClick="showsearchbar()">
+              <a href="#" title="Tìm kiếm" onClick="showsearchbar()">
                 <span class="material-symbols-outlined" style="color:black">search</span>
               </a>
             </li>
@@ -79,26 +68,31 @@
           <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
         </svg>
       </button>
-      <form class="d-flex justify-content-center" method="get" action="index.php">
-        <input type="hidden" name="to" value="search">
-        <input type="hidden" name="from" value="searchbar">
+      <form class="d-flex justify-content-center" method="get" action="./View/booklist.php">
         <input type="search" name="key" class="search-box" id="searchbar" placeholder="Tìm kiếm">
         <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
       </form>
     </div>
 
-      <div class="row">
-        <div class="col heading">
-            <h2> Danh sách sản phẩm </h2>
-        </div>
+    <div class="row">
+      <div class="col heading">
+        <h2> Danh sách sản phẩm </h2>
       </div>
-      <div class="row product-list">
-        <?php
-          require_once("../Controller/DanhsachController.php");
-          $controller = new DanhsachController();
-          $controller->invoke();
-        ?>
-      </div>
+    </div>
+    <div class="row product-list">
+      <?php
+      require_once("../Controller/DanhsachController.php");
+      $controller = new DanhsachController();
+      $controller->invoke();
+      ?>
+    </div>
+    <div class="row product-list">
+      <?php
+      require_once("../Controller/DanhsachController.php");
+      $controller = new DanhsachController();
+      $controller->tl_invoke($_GET['tl']);
+      ?>
+    </div>
   </div>
   </div>
   </div>
