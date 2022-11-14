@@ -31,7 +31,7 @@
     background-color: white;
     border-bottom-style: outset;
     height: 110px;
-
+    width: 100%;
   }
   .navbar-brand:hover{
     transform: scale(1.2);
@@ -130,7 +130,9 @@
   .search-icon:hover{
       color: #666666;
   }
-  
+  .banner{
+    margin-top: 5%;
+  }
   /* content */
   .content{
     background: #ffffff;
@@ -141,9 +143,9 @@
   }
   .view{
     text-decoration: underline;
-    text-align: right;
+    margin-left:50%;
     font-weight: bold;
-    padding-right: 5%;
+    color:red;
   }
   .view:hover{
     color: darkgoldenrod;

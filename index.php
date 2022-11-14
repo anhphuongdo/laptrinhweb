@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Trang chủ</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style/wqlnsstyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+  <title>Trang chủ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/wqlnsstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="java.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="header">
-            <div class="row text-center cursive">
-                <div class="col text-center">
-                    Welcome to The A.N.H Bookshop!
-                    <a href="#" class="has-text-action-primary" style="font-weight:bold">
-                        <u>Learn more here!</u>
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="menu default_font" id="action-menu">
             <nav class="navbar navbar-expand navbar-light fixed-top">
-                <a class="navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115" /></a>
+                <a class="navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="./image/logo.png" width="115" /></a>
                 <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">TRANG CHỦ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="View/booklist.php?nd=sachkt">SÁCH KINH TẾ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="View/booklist.php">SÁCH HỌC NGOẠI NGỮ</a>
+                        <li class="nav-item active"><a class="nav-link" href="./index.php">TRANG CHỦ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../LaptrinhWeb/View/booklist.php?tl=TL001">SÁCH KINH TẾ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
-                                <a href="View/booklist.php?nd=sachAnh">ANH</a>
-                                <a href="View/booklist.php?nd=sachHan">HÀN</a>
-                                <a href="View/booklist.php?nd=sachNhat">NHẬT</a>
+                                <a href="../LaptrinhWeb/View/booklist.php?tl=TL004">ANH</a>
+                                <a href="../LaptrinhWeb/View/booklist.php?tl=TL005">HÀN</a>
+                                <a href="../LaptrinhWeb/View/booklist.php?tl=TL006">NHẬT</a>
                             </div>
                         </li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php"> SÁCH VĂN HỌC</a>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#"> SÁCH VĂN HỌC</a>
                             <div class="dropdown-menu">
-                                <a href="View/booklist.php/vhVietNam"> VIỆT NAM</a>
-                                <a href="View/booklist.php/vhnuocngoai"> NƯỚC NGOÀI</a>
+                                <a href="../LaptrinhWeb/View/booklist.php?tl=TL002"> VIỆT NAM</a>
+                                <a href="../LaptrinhWeb/View/booklist.php?tl=TL003"> NƯỚC NGOÀI</a>
                             </div>
                         </li>
                     </ul>
@@ -53,17 +47,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href="../View/signin.php" title="Tài khoản">
+                            <a href="../LaptrinhWeb/View/userprofile.php" title="Tài khoản">
                                 <span class="material-symbols-outlined" style="color:black">person</span>
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="View/shoppingcart.php" title="Giỏ hàng">
+                            <a href="../LaptrinhWeb/View/shoppingcart.php" title="Giỏ hàng">
                                 <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a href="View/booklist.php?nd=" title="Tìm kiếm" onClick="showsearchbar()">
+                            <a href="#" title="Tìm kiếm" onClick="showsearchbar()">
                                 <span class="material-symbols-outlined" style="color:black">search</span>
                             </a>
                         </li>
@@ -78,9 +72,7 @@
                     <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                 </svg>
             </button>
-            <form class="d-flex justify-content-center" method="get" action="index.php">
-                <input type="hidden" name="to" value="search">
-                <input type="hidden" name="from" value="searchbar">
+            <form class="d-flex justify-content-center" method="get" action="./View/booklist.php">
                 <input type="search" name="key" class="search-box" id="searchbar" placeholder="Tìm kiếm">
                 <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
             </form>
@@ -117,7 +109,8 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách kinh tế </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL001">Xem tất cả sản phẩm</a>
+            </form>
                 </div>
             </div>
             <div class="row product-list">
@@ -130,7 +123,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Anh </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL004">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -143,7 +136,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Hàn </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL005">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -156,7 +149,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Trung </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL006">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -171,7 +164,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Văn học Việt Nam </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL002">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -186,7 +179,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Văn học nước ngoài </h2>
-                    <p class ="view">Xem tất cả sản phẩm</p>
+                    <a class="view" href="../LaptrinhWeb/View/booklist.php?tl=TL003">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">

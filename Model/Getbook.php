@@ -43,6 +43,21 @@
             giaiPhongBoNho($link, $result);
             return $data;
         }
+        public function getbooklist_theotheloai($name){
+            $link = null;
+            taoketnoi($link);
+            $data = array();
+            $result = chayTruyVanTraVeDL($link, "select * 
+                                                from theloai, sach
+                                                where theloai.id_theloai = sach.id_theloai and theloai.ten_theloai='%".$name."%'");
+            while($rows = mysqli_fetch_assoc($result))
+            {
+                $book = new Sach($rows["id_sach"], $rows["ten_sach"], $rows["id_theloai"], $rows["id_tacgia"], $rows["id_nxb"], $rows["giatien"], $rows["soluong"], $rows["hinhanh"]);
+                array_push($data, $book);
+            }
+            giaiPhongBoNho($link, $result);
+            return $data;
+        }
     }
 ?>
     
