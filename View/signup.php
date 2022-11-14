@@ -89,70 +89,68 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12 col-sm-12 signin-right">
-                <form action="">
-                    <div class="name form-control1 ">
-                        <input type="text"   id="name" placeholder="Họ và tên">
-                    </div>
-                    <div class="phonen-number form-control1">
-                        <input type="text" id="Phone-number" placeholder="Số điện thoại">
-                    </div>
-                    <div class="birthday form-control1">
-                        <input type="text" id="birthday" placeholder="mm/dd/yyyy">
-                    </div>
-                    <div class="email form-control1">
-                        <input type="email"  id="email" placeholder="Email">
-                    </div>
-                    <div class="password form-control1">
-                        <input type="password"  id="password" placeholder="Password">
-                    </div>
-                    <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
-                    <input type="submit" class="submit" value="Đăng ký" name="submit">
-                    <div class="backto">
-                      <a href="../index.html"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
-                    </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+                    <form action="">
+                        <div class="name form-control1 ">
+                            <input type="text" id="name" placeholder="Họ và tên">
+                        </div>
+                        <div class="phonen-number form-control1">
+                            <input type="text" id="Phone-number" placeholder="Số điện thoại">
+                        </div>
+                        <div class="email form-control1">
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="password form-control1">
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                        <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
+                        <input type="submit" class="submit" value="Đăng ký" name="submit">
 
-        <div class="footer row text-center">
-            <div class="col-md-4">
-                <hr class="light" />
-                <h5> Giới thiệu</h5>
-                <hr class="light" />
-                <p>Vài dòng giới thiệu</p>
+                        <div class="backto">
+                            <a href="../index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
+                        </div>
+                        </input>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-4">
-                <hr class="light" />
-                <h5> Founder:</h5>
-                <hr class="light" />
-                <p>Đỗ Thị Phương Anh</p>
-                <p>Nông Thảo Hiền</p>
-                <p>Đặng Thị Kim Ngân</p>
-            </div>
-            <div class="col-md-4">
-                <hr class="light" />
-                <h5> Liên hệ</h5>
-                <hr class="light" />
-                <p>Phone-number</p>
-                <p>Address</p>
-                <p>Email</p>
-            </div>
-            <div class="col-12">
-                <hr class="light-100">
-                <p>Đây là sản phẩm mô phỏng phục vụ cho môn học của sinh viên</p>
-                <h5>&copy; Đại học Kinh tế Thành phố Hồ Chí Minh, 2022</h5>
+
+            <div class="footer row text-center">
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5> Giới thiệu</h5>
+                    <hr class="light" />
+                    <p>Vài dòng giới thiệu</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5> Founder:</h5>
+                    <hr class="light" />
+                    <p>Đỗ Thị Phương Anh</p>
+                    <p>Nông Thảo Hiền</p>
+                    <p>Đặng Thị Kim Ngân</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light" />
+                    <h5> Liên hệ</h5>
+                    <hr class="light" />
+                    <p>Phone-number</p>
+                    <p>Address</p>
+                    <p>Email</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <p>Đây là sản phẩm mô phỏng phục vụ cho môn học của sinh viên</p>
+                    <h5>&copy; Đại học Kinh tế Thành phố Hồ Chí Minh, 2022</h5>
+                </div>
             </div>
         </div>
-    </div>
-    <script async defer crossorigin="anonymous" src="plugins/sdk.js"></script>
-    <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
-    <script src="plugins/bootstrap/popper.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="plugins/owl.carousel/owl.carousel.min.js"></script>
-    <script src="java/script.js"></script>
-    <script src="plugins/uikit/uikit.min.js"></script>
-    <script src="plugins/uikit/uikit-icons.min.js"></script>
+        <script async defer crossorigin="anonymous" src="plugins/sdk.js"></script>
+        <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+        <script src="plugins/bootstrap/popper.min.js"></script>
+        <script src="plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="plugins/owl.carousel/owl.carousel.min.js"></script>
+        <script src="java/script.js"></script>
+        <script src="plugins/uikit/uikit.min.js"></script>
+        <script src="plugins/uikit/uikit-icons.min.js"></script>
 </body>
 
 </html>

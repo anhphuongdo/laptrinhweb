@@ -6,7 +6,7 @@
     require_once "../Model/Getcustomer.php";
 
     $link = NULL;
-    taoKetNoi($link);
+    //taoKetNoi($link);
 
     /* if(isset($_POST['ten_kh']) && isset($_POST['email']) && isset($_POST['matkhau']) && isset($_POST['sdt']) && isset($_POST['diachi']))
     {
@@ -29,8 +29,9 @@
             $this->model = new UserModel();
         }
 
-        public function signup_ctl($email, $matkhau) {
+        public function signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi) {
             $data = $this->model->signup($ten_kh, $email, $matkhau, $sdt, $diachi);
-            if(isset($data))
-            
+            if(isset($data)) ($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/signin.php");
+        }
+    }
 ?>

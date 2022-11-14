@@ -13,7 +13,7 @@
             if(isset($data))
                  /* header("Location: ./index.php"); */
                  //include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/index.php";
-                { var_dump(is_dir($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/index.php")); exit;}
+                include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/index.php";
             else 
                 include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/signin.php";
         }

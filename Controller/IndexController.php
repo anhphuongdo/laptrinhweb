@@ -1,5 +1,5 @@
 <?php 
-    require_once("../LaptrinhWeb/Model/Getlimitbook.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getlimitbook.php");
 
     class IndexController{
         public $model;
@@ -9,7 +9,7 @@
 
         public function tl_limit_invoke($name){
             $books = $this->model->getbooklist_theotheloai($name);
-            include "../LaptrinhWeb/View/index_view.php";
+            include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/index_view.php";
         }
     }
 ?> 

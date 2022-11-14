@@ -115,7 +115,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Sách kinh tế");
                 ?>
@@ -128,7 +128,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Sách học tiếng Anh");
                 ?>
@@ -141,7 +141,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Sách học tiếng Hàn");
                 ?>
@@ -154,7 +154,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Sách học tiếng Trung");
                 ?>
@@ -169,7 +169,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Văn học Việt Nam");
                 ?>
@@ -184,7 +184,7 @@
             </div>
             <div class="row product-list">
                 <?php
-                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
                 $controller = new IndexController();
                 $controller -> tl_limit_invoke("Văn học nước ngoài");
                 ?>
