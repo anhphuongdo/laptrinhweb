@@ -1,5 +1,5 @@
 <?php 
-    require_once("../LaptrinhWeb/Model/Getbook.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getbook.php");
 
     class DanhsachController{
         public $model;
@@ -10,24 +10,24 @@
         public function invoke(){
             if(!isset($_GET["nd"])){
                 $books = $this->model->getallbooklist();
-                include "../LaptrinhWeb/View/allbooklist.php";
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booklist_view.php"; 
             }
             else
             {
                 $book = $this->model->getbook("nd");
-                include "../LaptrinhWeb/View/allbooklist.php";
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booklist_view.php";
             }
         }
         public function tl_invoke($name){
             $types = $this->model->gettypebookId();
             $books = $this->model->getallbooklist();
-            include "../LaptrinhWeb/View/booktypelist.php";
+            include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
         }
 
         public function tl_limit_invoke($name){
             $types = $this->model->gettypebookId();
             $books = $this->model->getallbooklist();
-            include "../LaptrinhWeb/View/index_view.php";
+            include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/index_view.php";
         }
     }
 ?>

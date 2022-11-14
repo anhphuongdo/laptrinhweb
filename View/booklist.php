@@ -1,10 +1,10 @@
 <html>
 
 <head>
-  <title>Trang chủ</title>
+  <title>Danh sách sản phẩm</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../stylee.css">
+  <link rel="stylesheet" href="../style/wqlnsstyle.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
 </head>
 
 <body>
@@ -88,214 +87,18 @@
       </form>
     </div>
 
-    <div class="product-gallery">
       <div class="row">
-        <div class="page-title">
-          <p class="gallery-title">Kết quả tìm kiếm</p>
+        <div class="col heading">
+            <h2> Danh sách sản phẩm </h2>
         </div>
       </div>
-      <div class="row row1">
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1 " id="item-1" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item1">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-              <?php
-              require_once("../Controller/DanhsachController.php");
-              $controller = new DanhsachController();
-              $controller->invoke();
-              
-              echo "<div class='content' id='content1'>
-                      <p class='name-item' id='name-item1'>".$book->get_tensach()."</p>
-                      <p class='price-item' id='price-item1'>".$book->get_giatien()."</p>
-                  </div>";
-              echo "<div class='col-sm-6 col-md-6 col-lg-3 products-list'>
-                      <div class='card card1' id='item-2' href='detailproduct.php'>
-                        <div class='pro-imgg'>
-                          <div class='image-item' id='image-item2'>
-                            <a href='#'><img class='pro-imggg' src='".$book->get_hinhanh()."'></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>";
-              ?>
-            </div>
-          </div>
-        </div>
+      <div class="row product-list">
+        <?php
+          require_once("../Controller/DanhsachController.php");
+          $controller = new DanhsachController();
+          $controller->invoke();
+        ?>
       </div>
-      <!-- <div class="content" id="content1">
-              <p class="name-item" id="name-item1"></p>
-              <p class="price-item" id="price-item1">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-2" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item2">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-
-            <div class="content" id="content2">
-              <p class="name-item" id="name-item2">Abc</p>
-              <p class="price-item" id="price-item2">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-3" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item3">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content3">
-              <p class="name-item" id="name-item3">Abc</p>
-              <p class="price-item" id="price-item3">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-4" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item4">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content4">
-              <p class="name-item" id="name-item4">Abc</p>
-              <p class="price-item" id="price-item4">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row row2">
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-5" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item5">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content5">
-              <p class="name-item" id="name-item5">Abc</p>
-              <p class="price-item" id="price-item5">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-6" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item6">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content2">
-              <p class="name-item" id="name-item6">Abc</p>
-              <p class="price-item" id="price-item6">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-7" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item7">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content3">
-              <p class="name-item" id="name-item7">Abc</p>
-              <p class="price-item" id="price-item7">1,050,000đ </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-3 products-list">
-          <div class="card card1" id="item-8" href="detailproduct.html">
-            <div class="pro-imgg">
-              <div class="image-item" id="image-item8">
-                <a href="#">
-                  <img class="pro-imggg" src="image/vimo.jpg">
-                </a>
-              </div>
-              <div class='pro-btn d-flex'>
-                <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="content" id="content8">
-              <p class="name-item" id="name-item8">Abc</p>
-              <p class="price-item" id="price-item8">1,050,000đ </p>
-            </div>
-          </div>
-        </div> -->
-    </div>
   </div>
   </div>
   </div>

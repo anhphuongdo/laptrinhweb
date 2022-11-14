@@ -1,7 +1,7 @@
 <?php 
-    require_once("../LaptrinhWeb/Model/Class/Sach.php");
-    require_once("../LaptrinhWeb/Model/Class/Theloai.php");
-    require_once("../LaptrinhWeb/db_module.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Class/Sach.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Class/Theloai.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/db_module.php");
 
     class Getbook{
         public function getallbooklist(){
