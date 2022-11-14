@@ -30,14 +30,14 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="../index.php">TRANG CHỦ</a></li>
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="./booklist.php?tl=TL001">SÁCH KINH TẾ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="./booklist.php?tl=2">SÁCH HỌC NGOẠI NGỮ</a>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
                                 <a href="./booklist.php?tl=TL004">ANH</a>
                                 <a href="./booklist.php?tl=TL005">HÀN</a>
                                 <a href="./booklist.php?tl=TL006">NHẬT</a>
                             </div>
                         </li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="../View/booklist.php?tl=5"> SÁCH VĂN HỌC</a>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#"> SÁCH VĂN HỌC</a>
                             <div class="dropdown-menu">
                                 <a href="./booklist.php?tl=TL002"> VIỆT NAM</a>
                                 <a href="./booklist.php?tl=TL003"> NƯỚC NGOÀI</a>
