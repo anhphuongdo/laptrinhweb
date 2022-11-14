@@ -30,7 +30,7 @@
     </div>
     <div class="menu" id="action-menu">
       <nav class="navbar navbar-expand navbar-light sticky-top">
-        <a class="navbar-brand" href="../index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115" /></a>
+        <a class="navbar-brand" href="../index.php"><img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="115" /></a>
         <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
@@ -113,23 +113,20 @@
               require_once("../Controller/DanhsachController.php");
               $controller = new DanhsachController();
               $controller->invoke();
-
-              echo"<div class='content' id='content1'>
-              <p class='name-item' id='name-item1'>".$book->get_tensach()."</p>
-              <p class='price-item' id='price-item1'>".$book->get_giatien()."</p>
-            </div>
-          </div>
-        </div>";
-        echo"
-        <div class='col-sm-6 col-md-6 col-lg-3 products-list'>
-          <div class='card card1' id='item-2' href='detailproduct.html'>
-            <div class='pro-imgg'>
-              <div class='image-item' id='image-item2'>
-                <a href='#'>
-                  <img class='pro-imggg' src='".$book->get_hinhanh()."'>
-                </a>
-              </div>
-              "
+              
+              echo "<div class='content' id='content1'>
+                      <p class='name-item' id='name-item1'>".$book->get_tensach()."</p>
+                      <p class='price-item' id='price-item1'>".$book->get_giatien()."</p>
+                  </div>";
+              echo "<div class='col-sm-6 col-md-6 col-lg-3 products-list'>
+                      <div class='card card1' id='item-2' href='detailproduct.php'>
+                        <div class='pro-imgg'>
+                          <div class='image-item' id='image-item2'>
+                            <a href='#'><img class='pro-imggg' src='".$book->get_hinhanh()."'></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>";
               ?>
             </div>
           </div>

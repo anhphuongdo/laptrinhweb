@@ -4,7 +4,7 @@
     <title>Trang chủ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="./style/wqlnsstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
 </head>
 
 <body>
@@ -26,8 +27,8 @@
                 </div>
             </div>
         </div>
-        <div class="menu" id="action-menu">
-            <nav class="navbar navbar-expand navbar-light sticky-top">
+        <div class="menu default_font" id="action-menu">
+            <nav class="navbar navbar-expand navbar-light fixed-top">
                 <a class="navbar-brand" href="index.php"><img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="115" /></a>
                 <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -115,330 +116,85 @@
         <div class="content">
             <div class="row">
                 <div class="col heading">
-                    <h2> Best Seller </h2>
+                    <h2> Sách kinh tế </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
             </div>
             <div class="row product-list">
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">get_ten_sach(</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Sách kinh tế");
+                ?>
             </div>
             <div class="row">
                 <div class="col heading">
-                    <h2> Tiểu thuyết </h2>
+                    <h2> Sách học tiếng Anh </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
             </div>
             <div class="row product-list">
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Sách học tiếng Anh");
+                ?>
             </div>
             <div class="row">
                 <div class="col heading">
-                    <h2> Sách tham khảo </h2>
+                    <h2> Sách học tiếng Hàn </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
             </div>
             <div class="row product-list">
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Sách học tiếng Hàn");
+                ?>
+            </div>
+            <div class="row">
+                <div class="col heading">
+                    <h2> Sách học tiếng Trung </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row product-list">
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Sách học tiếng Trung");
+                ?>
+            </div>
+            <div class="row product-list">
+            </div>
+            <div class="row">
+                <div class="col heading">
+                    <h2> Văn học Việt Nam </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row product-list">
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Văn học Việt Nam");
+                ?>
+            </div>
+            <div class="row product-list">
+            </div>
+            <div class="row">
+                <div class="col heading">
+                    <h2> Văn học nước ngoài </h2>
+                    <p class ="view">Xem tất cả sản phẩm</p>
                 </div>
-                <div class='col-lg-3 col-md-6 col-6 products'>
-                    <div class='pro-img'>
-                        <div class='pro-sale'><span>-30%</span></div>
-                        <div class="suggestedimage" id="suggestedimage1">
-                            <a href="#">
-                                <img class='pro-img pro-img-1' src="image/vimo.jpg">
-                                <img class='pro-img ' src="image/vimo.jpg">
-                            </a>
-                        </div>
-                        <div class='pro-btn d-flex'>
-                            <a href="#" class='hidden-btn'><svg width='16' height='16' fill='currentColor' class='bi bi-eye' viewBox='0 0 16 16'>
-                                    <path d='M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z' />
-                                    <path d='M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z' />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class='pro-detail'>
-                        <h3 class='pro-name'><a href="#">Abc</a></h3>
-                        <div class='pro-price'>
-                            <p class='pro-price sale'>1,050,000đ
-                                <span class='pro-price-retail'><del>1,500,000₫</del></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="row product-list">
+                <?php
+                require_once("../LaptrinhWeb/Controller/IndexController.php");
+                $controller = new IndexController();
+                $controller -> tl_limit_invoke("Văn học nước ngoài");
+                ?>
             </div>
         </div>
         <div class="footer row text-center">

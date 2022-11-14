@@ -1,12 +1,12 @@
-
-.container-fluid{
-    width: 100%;
-    height: auto;
-  }
   html, body{
     line-height: 1.4;
-    font-family: 'Quicksand', sans-serif;
   }
+  .container-fluid{
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+	  margin: 0px;
+    padding: 0px;
+}
   .header{
     width:100%;
     height: fit-content;
@@ -32,6 +32,9 @@
     border-bottom-style: outset;
     height: 110px;
 
+  }
+  .navbar-brand:hover{
+    transform: scale(1.2);
   }
     li a, .dropbtn {  
       color: rgb(4, 4, 4);
@@ -136,38 +139,46 @@
     padding: 40px 40px;
     text-align: center;
   }
-  .products{
-      position: relative;
-      display: block;
-      overflow: hidden;
-      margin-bottom: 30px;
-      padding: 0 10px ;	
+  .view{
+    text-decoration: underline;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 5%;
   }
-  .product-list{
-      height: 50xp;
+  .view:hover{
+    color: darkgoldenrod;
+  }
+  .carousel-control-next,
+  .carousel-control-prev
+  {
+      filter: invert(100%);
+      width: 2rem;
+  }
+  .products{
+    position: relative;
+    display: block;
+    margin-bottom: 80px;
+  }
+  .products:hover{
+    transform: scale(1.2);
   }
   .pro-detail{
-      text-align: center;
-      padding: 20px 0px;
+      text-align: center; 
+      color: #000 !important;
   }
   .pro-detail h3{
       text-transform: uppercase;
       margin: 0 0 5px;
       font-size:14px;
       position: relative;
-  
   }
   .pro-price{
-      font-weight: bold;
-  }
-  p.pro-price{
       line-height: 1.4;
       font-size: 14px;
       font-weight: 700;
       margin-bottom: 0;
-  }
-  p.pro-price.sale{
-      color: #FF0004;
+      font-weight: bold;
+      color: #000 !important;
   }
   .pro-price-retail{
       color: #222222;
@@ -176,31 +187,17 @@
       font-weight: 500;
   }
   .pro-img{
-
-      height: 200px;
+      height: 90%;
       transition: all 0.5s ease 0s;
-      width:130px;
+      width: 80%;
+      margin: auto;
+  }
 
-  }
-  .pro-sale{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 11px;
-      font-weight: bold;
-      z-index: 2;
-      color: #FFFFFF;
-      background: #FF0004;
-      opacity: 0.8;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-  }
   .pro-btn 
   {
     width: 100%;
     opacity: 0;
+    padding: 5%;
     visibility: hidden;
     position: absolute;
     display: flex;
