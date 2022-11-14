@@ -73,7 +73,7 @@
         <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
       </form>
     </div>
-
+    
     <div class="row">
       <div class="col heading">
         <h2> Danh sách sản phẩm </h2>
@@ -86,13 +86,6 @@
       $controller->invoke();
       ?>
     </div> 
-    <div class="row product-list">
-      <?php
-      require_once("../Controller/DanhsachController.php");
-      $controller = new DanhsachController();
-      $controller->tl_invoke($_GET['tl']);
-      ?>
-    </div>
   </div>
   </div>
   </div>
