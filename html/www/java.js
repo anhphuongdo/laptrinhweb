@@ -12,7 +12,7 @@ function showsearchbar(){
 function hidesearchbar(){
     searchbar.style.visibility = 'hidden';
     menu.style.visibility = "visible";
-}
+} 
 
 $('input.input-qty').each(function() {
     var $this = $(this),

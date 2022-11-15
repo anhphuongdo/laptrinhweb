@@ -39,7 +39,7 @@
             $data = array();
             while($rows = mysqli_fetch_assoc($result))
             {
-                $nxbs = new Tacgia($rows["id_nxb"], $rows["ten_nxb"]);
+                $nxbs = new NXB($rows["id_nxb"], $rows["ten_nxb"]);
                 array_push($data, $nxbs);
             }
             giaiPhongBoNho($link, $result);
