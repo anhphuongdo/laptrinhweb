@@ -2,25 +2,25 @@
 
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getcustomer.php");
 
-    function signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi)
+    function signup_ctl($ten_kh, $matkhau, $sdt, $diachi, $email)
     {
         $link = NULL;
         taoKetNoi($link);
-        if(isset($_POST['email']) && isset($_POST['matkhau']))
+        if(isset($email) && isset($matkhau))
         {
-            $valid = $_POST['matkhau'];
+            $valid = $matkhau;
             $valid = $valid&&validateLenUP('matkhau');
-            $valid = $valid&&validateEmail($_SESSION['email']);
+            $valid = $valid&&validateEmail($email);
             if($valid)
             {
-                if(existsEmail($link, $_POST['email']))
+                if(existsEmail($link, $email))
                 {
                     giaiPhongBoNho($link, true);
                     echo "duplicate";
                 }
                 else
                 {
-                    dangki($link, $_POST['ten_kh'], $_POST['email'], $_POST['matkhau'], $_POST['sdt'], $_POST['diachi']);
+                    dangki($link, $ten_kh, $matkhau, $sdt, $diachi, $email);
                     giaiPhongBoNho($link, true);
                     echo "done";
                     include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/signin.php");

@@ -82,7 +82,17 @@
             include_once("../Controller/DangkyController.php");
             if(isset($_POST['submit']))
             {
-                signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi);
+                $ten_kh = $_POST['ten_kh'];
+                $email = $_POST['email'];
+                $matkhau = $_POST['matkhau'];
+                $sdt = $_POST['sdt'];
+                $diachi = $_POST['diachi'];
+                $_SESSION['ten_kh'] = $ten_kh;
+                $_SESSION['email'] = $email;
+                $_SESSION['matkhau'] = $matkhau;
+                $_SESSION['sdt'] = $sdt;
+                $_SESSION['diachi'] = $diachi;
+                signup_ctl($ten_kh, $matkhau, $sdt, $diachi, $email);
             }
         ?>
         <div class="content">
@@ -98,19 +108,19 @@
                 <div class="col-md-6 col-xs-12 col-sm-12 signin-right">
                     <form action="" method="post">
                         <div class="name form-control1 ">
-                            <input type="text" id="name" placeholder="Họ và tên">
+                            <input type="text" id="ten_kh" placeholder="Họ và tên" name="ten_kh">
                         </div>
                         <div class="email form-control1">
                             <input type="email" id="email" placeholder="Email" name="email" value="<?php echo isset($_GET['email'])?$_GET['email']:"";?>"/>
                         </div>
                         <div class="password form-control1">
-                            <input type="password" id="password" placeholder="Password">
+                            <input type="password" id="matkhau" placeholder="Password" name="matkhau">
                         </div>
                         <div class="phonen-number form-control1">
-                            <input type="text" id="Phone-number" placeholder="Số điện thoại">
+                            <input type="text" id="sdt" placeholder="Số điện thoại" name="sdt">
                         </div>
                         <div class="address form-control1">
-                            <input type="text" id="address" placeholder="Địa chỉ">
+                            <input type="text" id="diachi" placeholder="Địa chỉ" name="diachi">
                         </div>
                         <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
                         <input type="submit" class="submit" value="Đăng ký" name="submit">

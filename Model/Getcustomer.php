@@ -3,9 +3,10 @@
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/db_module.php");
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Validate.php");
 
-    function dangki($link, $ten_kh, $email, $matkhau, $sdt, $diachi)
+    function dangki($link, $ten_kh, $matkhau, $sdt, $diachi, $email)
     {
-        chayTruyVanKhongTraVeDL($link, "insert into khachhang values (NULL,'$ten_kh', '".mysqli_real_escape_string($link, $email)."', '$matkhau', '$sdt', '$diachi')");
+        chayTruyVanKhongTraVeDL($link, "INSERT INTO khachhang(ten_kh, matkhau, sdt, diachi, email)
+                                        VALUES ('$ten_kh', '$matkhau', '$sdt', '$diachi', '".mysqli_real_escape_string($link, $email)."')");
     }
 
     function dangnhap($email, $matkhau)

@@ -24,53 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `donhang`
---
-
-CREATE TABLE `donhang` (
-  `id_donhang` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_kh` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_sach` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `soluong` int(11) DEFAULT NULL,
-  `thoigian` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `donhang`
---
-
-INSERT INTO `donhang` (`id_donhang`, `id_kh`, `id_sach`, `soluong`, `thoigian`) VALUES
-('DH001', 'KH001', 'SP001', 2, '2022-11-12 23:49:06'),
-('DH002', 'KH002', 'SP005', 4, '2022-11-12 23:49:06'),
-('DH003', 'KH003', 'SP006', 6, '2022-11-12 23:49:06'),
-('DH004', 'KH004', 'SP007', 8, '2022-11-12 23:49:06'),
-('DH005', 'KH005', 'SP009', 9, '2022-11-12 23:49:06');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `khachhang`
---
-
-CREATE TABLE `khachhang` (
-  `id_kh` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ten_kh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `matkhau` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sdt` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diachi` varchar(8000) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `khachhang`
---
-
-INSERT INTO `khachhang` (`id_kh`, `ten_kh`, `matkhau`, `sdt`, `diachi`, `email`) VALUES
-('KH001', 'Nguyễn Văn A', '12345678', '0123456789', 'Hà Giang', 'nva@gmail.com'),
-('KH002', 'Nguyễn Văn B', '12345678', '0289999999', 'Hà Nội', 'nvb@gmail.com'),
-('KH003', 'Đỗ Thị Phương Anh', '12345678', '0335991355', 'Thanh Hóa', 'anhdo@gmail.com'),
-('KH004', 'Nông Thảo Hiền', '12345678', '0333333333', 'Tiền Giang', 'hiennong@gmail.com'),
-('KH005', 'Đặng Thị Kim Ngân', '12345678', '0555555555', 'TP.HCM', 'ngandang@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -418,16 +371,10 @@ INSERT INTO `theloai` (`id_theloai`, `ten_theloai`) VALUES
 --
 -- Chỉ mục cho bảng `donhang`
 --
-ALTER TABLE `donhang`
-  ADD PRIMARY KEY (`id_donhang`),
-  ADD KEY `FK_DH_SP` (`id_sach`),
-  ADD KEY `FK_DH_KH` (`id_kh`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
 --
-ALTER TABLE `khachhang`
-  ADD PRIMARY KEY (`id_kh`);
 
 --
 -- Chỉ mục cho bảng `motasach`
@@ -469,9 +416,6 @@ ALTER TABLE `theloai`
 --
 -- Các ràng buộc cho bảng `donhang`
 --
-ALTER TABLE `donhang`
-  ADD CONSTRAINT `FK_DH_KH` FOREIGN KEY (`id_kh`) REFERENCES `khachhang` (`id_kh`),
-  ADD CONSTRAINT `FK_DH_SP` FOREIGN KEY (`id_sach`) REFERENCES `sach` (`id_sach`);
 
 --
 -- Các ràng buộc cho bảng `motasach`
