@@ -9,7 +9,7 @@
         public function set_mota($mota) {
             $this -> mota = $mota;
         }
-
+ 
         public function __construct($id_sach, $mota){
             $this -> id_sach = $id_sach;
             $this -> mota = $mota;

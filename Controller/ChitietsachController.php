@@ -1,5 +1,5 @@
 <?php
-    require_once("../LaptrinhWeb/Model/Getdetail.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getdetail.php");
 
     class ChitietsachController{
         public $model;
@@ -8,10 +8,13 @@
             $this -> model= new Getdetail();
         }
 
-        public function invoke($name)
+        public function invoke($id)
         {
-            $book = $this->model->getdetailbook($name);
-            include "../LaptrinhWeb/View/detailproduct_view.php";
+            $books = $this->model->getbook();
+            $motas = $this->model->getmota();
+            $tacgias = $this->model->gettacgia();
+            $nxbs = $this->model->getnxb();
+            include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/detailproduct_view.php";
         }
     } 
-?>
+?> 
