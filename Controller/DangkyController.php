@@ -1,37 +1,46 @@
 <?php
-    session_start();
 
-    require_once "db_module.php";
-    require_once "../Model/Validate.php";
-    require_once "../Model/Getcustomer.php";
+    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getcustomer.php");
 
-    $link = NULL;
-    //taoKetNoi($link);
-
-    /* if(isset($_POST['ten_kh']) && isset($_POST['email']) && isset($_POST['matkhau']) && isset($_POST['sdt']) && isset($_POST['diachi']))
+    function signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi)
     {
-        $valid = $valid&&validateEmail($_POST['email']);
-        $valid = $valid&&validateLenUP($_POST['matkhau']);
-        if($valid)
+        $link = NULL;
+        taoKetNoi($link);
+        if(isset($_POST['email']) && isset($_POST['matkhau']))
         {
-            if(existsEmail($link, $_POST['email'])) header("Location: signup.php?msg=duplicate&email=".$_POST['email']);
-            else
+            $valid = $_POST['matkhau'];
+            $valid = $valid&&validateLenUP('matkhau');
+            $valid = $valid&&validateEmail($_SESSION['email']);
+            if($valid)
             {
-                signup($_POST["ten_kh"], $_POST["email"], $_POST["matkhau"], $_POST["sdt"], $_POST["diachi"]);
-                header("Location: signup.php?msg=done");
+                if(existsEmail($link, $_POST['email']))
+                {
+                    giaiPhongBoNho($link, true);
+                    echo "duplicate";
+                }
+                else
+                {
+                    dangki($link, $_POST['ten_kh'], $_POST['email'], $_POST['matkhau'], $_POST['sdt'], $_POST['diachi']);
+                    giaiPhongBoNho($link, true);
+                    echo "done";
+                    include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/signin.php");
+                }
             }
+        else
+        {
+            giaiPhongBoNho($link, true);
+            echo "unvalid";
         }
-        else header("Location: signup.php?msg=unvalid-data&email=".$_POST('email'));
-    } */
-    class UserController {
+    }
+}
+    /* class UserController {
         public $model;
-        public function __construct() {
+        public function __construct()
+        {
             $this->model = new UserModel();
         }
-
         public function signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi) {
             $data = $this->model->signup($ten_kh, $email, $matkhau, $sdt, $diachi);
             if(isset($data)) ($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/signin.php");
         }
-    }
-?>
+    } */

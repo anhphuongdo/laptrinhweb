@@ -79,14 +79,14 @@
         </div>
         <?php
             session_start();
-            include_once $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/DangnhapController.php";
-            if (isset($_POST['submit'])) {
+            include_once("../Controller/DangnhapController.php");
+            if(isset($_POST['submit']))
+            {
                 $email = $_POST['email'];
                 $matkhau = $_POST['matkhau'];
                 $_SESSION['email'] = $email;
                 $_SESSION['matkhau'] = $matkhau;
-                $userController = new UserController();
-                $userController->login_ctl($email, $matkhau);
+                login_ctl($email, $matkhau);
             }
         ?>
         <div class="content">
@@ -109,18 +109,21 @@
                             <input type="password" id="password" placeholder="Password" name="matkhau">
                         </div>
                         <?php
-                        if (isset($_GET['msg'])) {
-                            if ($_GET['msg'] === 'login-fail') {
+                        if(isset($_GET['msg']))
+                        {
+                            if($_GET['msg'] == 'login-fail')
+                            {
                                 echo "<span style='margin-bottom: 40px; color: red; font-size: 12px;'>Sai thông tin đăng nhập</span>";
-                            } else if ($_GET['msg'] === 'missing-info') {
+                            }
+                            else if($_GET['msg'] == 'missing-info')
+                            {
                                 echo "<span style='margin-bottom: 40px; color: red; font-size: 12px;'>Vui lòng nhập đủ thông tin</span>";
                             }
                         }
                         ?>
                         <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
                         <input type="submit" class="submit" value="Đăng nhập" name="submit">
-                            <p></p>
-                    </input>
+                        </input>
                         <div class="dangky">
                             <a href="../View/signup.php"><i class="fa fa-long-arrow-alt-left"></i> Đăng ký tài khoản </a>
                         </div>

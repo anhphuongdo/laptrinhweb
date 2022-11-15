@@ -77,38 +77,47 @@
                 <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
             </form>
         </div>
+        <?php
+            session_start();
+            include_once("../Controller/DangkyController.php");
+            if(isset($_POST['submit']))
+            {
+                signup_ctl($ten_kh, $email, $matkhau, $sdt, $diachi);
+            }
+        ?>
         <div class="content">
             <div class="row signup">
                 <div class="col-md-6 col-xs-12 col-sm-12 signin-left">
                     <div class="logobrand">
-                        <img alt="The A.N.H Bookshop's Logo" src="image/logo.png" width="225" />
+                        <img alt="The A.N.H Bookshop's Logo" src="../image/logo.png" width="225" />
                     </div>
                     <div class="sign-title">
                         <h1>Tạo tài khoản</h1>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-xs-12 col-sm-12 signin-right">
-                    <form action="">
+                    <form action="" method="post">
                         <div class="name form-control1 ">
                             <input type="text" id="name" placeholder="Họ và tên">
                         </div>
-                        <div class="phonen-number form-control1">
-                            <input type="text" id="Phone-number" placeholder="Số điện thoại">
-                        </div>
                         <div class="email form-control1">
-                            <input type="email" id="email" placeholder="Email">
+                            <input type="email" id="email" placeholder="Email" name="email" value="<?php echo isset($_GET['email'])?$_GET['email']:"";?>"/>
                         </div>
                         <div class="password form-control1">
                             <input type="password" id="password" placeholder="Password">
                         </div>
+                        <div class="phonen-number form-control1">
+                            <input type="text" id="Phone-number" placeholder="Số điện thoại">
+                        </div>
+                        <div class="address form-control1">
+                            <input type="text" id="address" placeholder="Địa chỉ">
+                        </div>
                         <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
                         <input type="submit" class="submit" value="Đăng ký" name="submit">
-
+                        </input>
                         <div class="backto">
                             <a href="../index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
                         </div>
-                        </input>
                     </form>
                 </div>
             </div>
@@ -151,6 +160,8 @@
         <script src="java/script.js"></script>
         <script src="plugins/uikit/uikit.min.js"></script>
         <script src="plugins/uikit/uikit-icons.min.js"></script>
+
+        <?php include_once("../View/msg.php");?>
 </body>
 
 </html>
