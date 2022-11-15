@@ -46,11 +46,6 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href="signin.php" title="Tài khoản">
-                                <span class="material-symbols-outlined" style="color:black">person</span>
-                            </a>
-                        </li>
-                        <li class="nav-item active">
                             <a href="shoppingcart.php" title="Giỏ hàng">
                                 <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
                             </a>
@@ -108,7 +103,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách kinh tế </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL001">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL001">Xem tất cả sản phẩm</a>
             </form>
                 </div>
             </div>
@@ -122,7 +117,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Anh </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL004">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL004">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -135,7 +130,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Hàn </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL005">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL005">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -148,7 +143,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Sách học tiếng Trung </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL006">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL006">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -163,7 +158,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Văn học Việt Nam </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL002">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL002">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">
@@ -178,7 +173,7 @@
             <div class="row">
                 <div class="col heading">
                     <h2> Văn học nước ngoài </h2>
-                    <a class="view" href="../LaptrinhWeb/View/booktypelist.php?tl=TL003">Xem tất cả sản phẩm</a>
+                    <a class="view" href="booktypelist.php?tl=TL003">Xem tất cả sản phẩm</a>
                 </div>
             </div>
             <div class="row product-list">

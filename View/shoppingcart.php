@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../style/wqlnsstyle.css">
-  <script src= "../script/java.js"></script>
+  <script src="../script/java.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -47,13 +47,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="signin.php" title="Tài khoản">
-                <span class="material-symbols-outlined" style="color:black">person</span>
+              <a href="signin.php" title="">
+                <span class="material-symbols-outlined" style="color:black"></span>
               </a>
             </li>
             <li class="nav-item active">
-              <a href="shoppingcart.php" title="Giỏ hàng">
-                <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
+              <a href="shoppingcart.php" title="">
+                <span class="material-symbols-outlined" style="color:black"></span>
               </a>
             </li>
           </ul>
@@ -139,24 +139,16 @@
           <!-- / Shopping cart table -->
 
           <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
-            <div class="mt-4">
-              <label class="text-muted font-weight-normal">Mã khuyến mãi</label>
-              <input type="text" placeholder="ABC" class="form-control">
-            </div>
             <div class="d-flex">
-              <div class="text-right mt-4 mr-5">
-                <label class="text-muted font-weight-normal m-0">Giảm giá</label>
-                <div class="text-large"><strong>50,000 VNĐ</strong></div>
-              </div>
               <div class="text-right mt-4">
-                <label class="text-muted font-weight-normal m-0">Tổng</label>
+                <label class="text-muted font-weight-normal m-0">Tổng thanh toán</label>
                 <div class="text-large"><strong>740,000 VNĐ</strong></div>
               </div>
             </div>
           </div>
 
           <div class="button" id="buttons">
-            <a href="#" class="btn blue">Quay về trang chủ</a>
+            <a href="index.php" class="btn blue">Quay về trang chủ</a>
             <a href="#" class="btn green">Xác nhận</a>
           </div>
         </div>
