@@ -23,7 +23,7 @@
         }
         public function set_id_theloai($id_theloai){
             $this -> id_theloai = $id_theloai;
-        }
+        } 
         public function set_id_tacgia($id_tacgia){
             $this -> id_tacgia = $id_tacgia;
         }
