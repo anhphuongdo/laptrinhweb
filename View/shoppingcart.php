@@ -47,12 +47,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="signin.php" title="">
+              <a href="#" title="">
                 <span class="material-symbols-outlined" style="color:black"></span>
               </a>
             </li>
             <li class="nav-item active">
-              <a href="shoppingcart.php" title="">
+              <a href="#" title="">
                 <span class="material-symbols-outlined" style="color:black"></span>
               </a>
             </li>

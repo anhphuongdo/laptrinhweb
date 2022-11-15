@@ -46,6 +46,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
+                            <a href="signin.php" title="Tài khoản">
+                                <span class="material-symbols-outlined" style="color:black">person</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
                             <a href="shoppingcart.php" title="Giỏ hàng">
                                 <span class="material-symbols-outlined" style="color:black">shopping_cart</span>
                             </a>
