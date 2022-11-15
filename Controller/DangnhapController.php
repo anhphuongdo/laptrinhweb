@@ -4,7 +4,7 @@
     function login_ctl($email, $matkhau) {
         if(dangnhap($email, $matkhau))
             include_once($_SERVER['DOCUMENT_ROOT']."/index.php");
-            else
+        else
             echo "Login fail";
         }
 ?>

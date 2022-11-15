@@ -6,7 +6,7 @@
         $link = mysqli_connect(HOST, USER, PASSWORD, DB);
         if(mysqli_connect_error())
         {
-            echo "Lỗi kết nối đến máy chủ" . mysqli_connect_error();
+            echo "Lỗi kết nối đến máy chủ" .mysqli_connect_error();
             exit();
         }
     }

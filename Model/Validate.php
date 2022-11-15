@@ -1,18 +1,10 @@
 <?php
-    function validateLenUP($up){
-        return strlen($up)>=8&&strlen($up)<=30;
-    }
-
-    function validateEmail($email){
-        return filter_var($email, FILTER_VALIDATE_EMAIL)!=false?true:false;
-    }
-
     function existsEmail($link, $email)
     {
-        $result = chayTruyVanTraVeDL($link, "select count(*) from khachhang where email ='".$email."'");
-        $row = mysqli_fetch_row($result);
-        mysqli_free_result($result);
-        return $row[0]>0;
-        
+        $stmt = $link->prepare("SELECT 1 FROM khachhang WHERE email=? LIMIT 1");
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $stmt->store_result();
+        return $stmt->num_rows;
     }
 ?>
