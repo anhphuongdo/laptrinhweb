@@ -15,7 +15,7 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="java.js"></script>
+    <script src="../java.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 </head>
@@ -28,19 +28,19 @@
                 <span style="color: rgb(4, 4, 4); font-weight:bold">The A.N.H Bookshop</span>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="../index.php">TRANG CHỦ</a></li>
-                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="./booklist.php?tl=TL001">SÁCH KINH TẾ</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.php">TRANG CHỦ</a></li>
+                        <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="booktypelist.php?tl=TL001">SÁCH KINH TẾ</a></li>
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#">SÁCH HỌC NGOẠI NGỮ</a>
                             <div class="dropdown-menu">
-                                <a href="./booklist.php?tl=TL004">ANH</a>
-                                <a href="./booklist.php?tl=TL005">HÀN</a>
-                                <a href="./booklist.php?tl=TL006">NHẬT</a>
+                                <a href="booktypelist.php?tl=TL004">ANH</a>
+                                <a href="booktypelist.php?tl=TL005">HÀN</a>
+                                <a href="booktypelist.php?tl=TL006">NHẬT</a>
                             </div>
                         </li>
                         <li class="nav-item active dropdown"><a class="nav-link drop-btn" href="#"> SÁCH VĂN HỌC</a>
                             <div class="dropdown-menu">
-                                <a href="./booklist.php?tl=TL002"> VIỆT NAM</a>
-                                <a href="./booklist.php?tl=TL003"> NƯỚC NGOÀI</a>
+                                <a href="booktypelist.php?tl=TL002"> VIỆT NAM</a>
+                                <a href="booktypelist.php?tl=TL003"> NƯỚC NGOÀI</a>
                             </div>
                         </li>
                     </ul>
@@ -73,7 +73,7 @@
                     <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
                 </svg>
             </button>
-            <form class="d-flex justify-content-center" method="get" action="./View/booklist.php">
+            <form class="d-flex justify-content-center" method="get" action="booklist.php">
                 <input type="search" name="key" class="search-box" id="searchbar" placeholder="Tìm kiếm">
                 <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
             </form>

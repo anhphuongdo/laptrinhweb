@@ -1,8 +1,14 @@
 <html>
     <body>
         <?php
+        foreach($types as $type){
+            if($type -> get_id_theloai() == $name){
+                $id = $type -> get_id_theloai();
+            }
+        }
         foreach($books as $book){
-            echo "
+            if($book -> get_id_theloai() == $id){
+                echo "
                 <div class='col-lg-3 col-md-6 col-6 products'>
                     <div class='pro-img'>
                         <div class='suggestedimage' id='suggestedimage1'>
@@ -21,7 +27,8 @@
                     </div>
                 </div>
             ";
+            }
         }
         ?>
     </body>
-</html>
+</html> 

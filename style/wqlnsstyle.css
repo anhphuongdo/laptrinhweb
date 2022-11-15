@@ -78,13 +78,13 @@
     
   /* search-bar */
   .searchbar{
-      background-color: #FFFFFF;
-      z-index: 11;
-      position: absolute;
-      top: 3.5% ;
-      height: 90px;
-      padding: 40px 54px 10px 10px;
-      width: 100%;
+    background-color: #FFFFFF;
+    z-index: 11;
+    position: absolute;
+    top: 3.5% ;
+    height: 90px;
+    padding: 40px 54px 10px 10px;
+    width: 100%;
   }
   .search-box{
       border-radius: 20px;

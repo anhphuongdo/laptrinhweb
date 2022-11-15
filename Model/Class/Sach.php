@@ -18,7 +18,7 @@
         public function get_soluong(){return $this->soluong;}
         public function get_hinhanh(){return $this->hinhanh;}
 
-        public function set_ten_sach($ten_sach){
+        public function set_ten_sach($ten_sach){ 
             $this -> ten_sach = $ten_sach;
         }
         public function set_id_theloai($id_theloai){

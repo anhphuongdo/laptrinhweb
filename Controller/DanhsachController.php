@@ -8,7 +8,7 @@
         }
 
         public function invoke(){
-            if(!isset($_GET['key']) && !isset($_GET['tl'])){
+            if(!isset($_GET['key'])){
                 $books = $this->model->getallbooklist();
                 include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booklist_view.php"; 
             }
@@ -19,37 +19,35 @@
             }
         }
         public function tl_invoke($name){
-            if(isset($_GET['tl'])){
-                if($_GET['tl'] == 'TL001'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
-                if($_GET['tl'] == 'TL002'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
-                if($_GET['tl'] == 'TL003'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
-                if($_GET['tl'] == 'TL004'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
-                if($_GET['tl'] == 'TL005'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
-                if($_GET['tl'] == 'TL006'){
-                    $types = $this->model->gettypebookId();
-                    $books = $this->model->getallbooklist();
-                    include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist.php";
-                }
+            if($_GET['tl'] == 'TL001'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
+            }
+            if($_GET['tl'] == 'TL002'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
+            }
+            if($_GET['tl'] == 'TL003'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
+            }
+            if($_GET['tl'] == 'TL004'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
+            }
+            if($_GET['tl'] == 'TL005'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
+            }
+            if($_GET['tl'] == 'TL006'){
+                $types = $this->model->gettypebookId();
+                $books = $this->model->getallbooklist();
+                include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/booktypelist_view.php";
             }
         }
     }
