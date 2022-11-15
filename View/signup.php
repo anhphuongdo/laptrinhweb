@@ -79,7 +79,7 @@
         </div>
         <?php
             session_start();
-            include_once("../Controller/DangkyController.php");
+            include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/DangkyController.php");
             if(isset($_POST['submit']))
             {
                 $ten_kh = $_POST['ten_kh'];
@@ -126,7 +126,7 @@
                         <input type="submit" class="submit" value="Đăng ký" name="submit">
                         </input>
                         <div class="backto">
-                            <a href="../index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
+                            <a href="index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
                         </div>
                     </form>
                 </div>
@@ -170,8 +170,6 @@
         <script src="java/script.js"></script>
         <script src="plugins/uikit/uikit.min.js"></script>
         <script src="plugins/uikit/uikit-icons.min.js"></script>
-
-        <?php include_once("../View/msg.php");?>
 </body>
 
 </html>

@@ -3,12 +3,22 @@
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/db_module.php");
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Validate.php");
 
-    function dangki($link, $ten_kh, $matkhau, $sdt, $diachi, $email)
+    function dangki($ten_kh, $matkhau, $sdt, $diachi, $email)
     {
-        chayTruyVanKhongTraVeDL($link, "INSERT INTO khachhang(ten_kh, matkhau, sdt, diachi, email)
-                                        VALUES ('$ten_kh', '$matkhau', '$sdt', '$diachi', '".mysqli_real_escape_string($link, $email)."')");
+        $link = NULL;
+        taoKetNoi($link);
+        if(existsEmail($link, $email))
+        {
+            giaiPhongBoNho($link, true);
+            return false;
+        }
+        else
+        {
+            chayTruyVanKhongTraVeDL($link, "INSERT INTO khachhang(ten_kh, matkhau, sdt, diachi, email)
+                                            VALUES ('$ten_kh', '$matkhau', '$sdt', '$diachi', '$email')");
+            return true;
+        }
     }
-
     function dangnhap($email, $matkhau)
     {
         $result = NULL;
@@ -32,4 +42,3 @@
         }
         else return false;
     }
-?>

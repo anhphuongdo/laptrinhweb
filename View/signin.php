@@ -78,8 +78,7 @@
             </form>
         </div>
         <?php
-            session_start();
-            include_once("../Controller/DangnhapController.php");
+            include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/DangnhapController.php");
             if(isset($_POST['submit']))
             {
                 $email = $_POST['email'];
@@ -125,7 +124,7 @@
                         <input type="submit" class="submit" value="Đăng nhập" name="submit">
                         </input>
                         <div class="dangky">
-                            <a href="../View/signup.php"><i class="fa fa-long-arrow-alt-left"></i> Đăng ký tài khoản </a>
+                            <a href="signup.php"><i class="fa fa-long-arrow-alt-left"></i> Đăng ký tài khoản </a>
                         </div>
                     </form>
                 </div>
@@ -170,10 +169,6 @@
         <script src="java/script.js"></script>
         <script src="plugins/uikit/uikit.min.js"></script>
         <script src="plugins/uikit/uikit-icons.min.js"></script>
-
-        <?php
-            require_once("../View/msg.php");
-        ?>
 </body>
 
 </html>

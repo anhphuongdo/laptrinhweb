@@ -1,38 +1,22 @@
 <?php
-
     require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Getcustomer.php");
 
     function signup_ctl($ten_kh, $matkhau, $sdt, $diachi, $email)
     {
-        $link = NULL;
-        taoKetNoi($link);
         if(isset($email) && isset($matkhau))
         {
-            $valid = $matkhau;
-            $valid = $valid&&validateLenUP('matkhau');
-            $valid = $valid&&validateEmail($email);
-            if($valid)
+            if(dangki($ten_kh, $matkhau, $sdt, $diachi, $email))
             {
-                if(existsEmail($link, $email))
-                {
-                    giaiPhongBoNho($link, true);
-                    echo "duplicate";
-                }
-                else
-                {
-                    dangki($link, $ten_kh, $matkhau, $sdt, $diachi, $email);
-                    giaiPhongBoNho($link, true);
-                    echo "done";
-                    include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/signin.php");
-                }
+                include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/signin.php");
+                echo "Success";
             }
+        }
         else
         {
             giaiPhongBoNho($link, true);
             echo "unvalid";
         }
     }
-}
     /* class UserController {
         public $model;
         public function __construct()

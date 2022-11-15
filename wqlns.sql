@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 15, 2022 lúc 01:59 PM
+-- Thời gian đã tạo: Th10 12, 2022 lúc 10:52 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `donhang` (
-  `id_donhang` int(11) NOT NULL,
-  `id_kh` int(11) NOT NULL,
+  `id_donhang` INT(11) COLLATE utf8mb4_unicode_ci NOT NULL AUTO_INCREMENT,
+  `id_kh` INT(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_sach` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
   `soluong` int(11) DEFAULT NULL,
   `thoigian` datetime DEFAULT NULL
@@ -53,7 +53,7 @@ INSERT INTO `donhang` (`id_donhang`, `id_kh`, `id_sach`, `soluong`, `thoigian`) 
 --
 
 CREATE TABLE `khachhang` (
-  `id_kh` int(11) NOT NULL,
+  `id_kh` INT(11) COLLATE utf8mb4_unicode_ci NOT NULL AUTO_INCREMENT,
   `ten_kh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `matkhau` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sdt` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -419,7 +419,6 @@ INSERT INTO `theloai` (`id_theloai`, `ten_theloai`) VALUES
 -- Chỉ mục cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  ADD PRIMARY KEY (`id_donhang`),
   ADD KEY `FK_DH_SP` (`id_sach`),
   ADD KEY `FK_DH_KH` (`id_kh`);
 
@@ -461,22 +460,6 @@ ALTER TABLE `tacgia`
 --
 ALTER TABLE `theloai`
   ADD PRIMARY KEY (`id_theloai`);
-
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `donhang`
---
-ALTER TABLE `donhang`
-  MODIFY `id_donhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT cho bảng `khachhang`
---
-ALTER TABLE `khachhang`
-  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

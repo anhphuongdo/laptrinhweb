@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href="userprofile.php" title="Tài khoản">
+                            <a href="signin.php" title="Tài khoản">
                                 <span class="material-symbols-outlined" style="color:black">person</span>
                             </a>
                         </li>
@@ -85,10 +85,10 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../image/chiasesach.jpg" alt="First slide">
+                        <img class="d-block w-100" src="../image/banner2.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../image/8 thang 3.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../image/banner1.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../image/sachhay.jpg" alt="Third slide">

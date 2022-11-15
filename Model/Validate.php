@@ -9,9 +9,10 @@
 
     function existsEmail($link, $email)
     {
-        $result = chayTruyVanTraVeDL($link, "select count(*) from Khachhang where email = ".$email."");
+        $result = chayTruyVanTraVeDL($link, "select count(*) from khachhang where email ='".$email."'");
         $row = mysqli_fetch_row($result);
         mysqli_free_result($result);
         return $row[0]>0;
+        
     }
 ?>
