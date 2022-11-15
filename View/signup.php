@@ -73,9 +73,8 @@
             </form>
         </div>
         <?php
-            session_start();
             include_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/DangkyController.php");
-            if(isset($_POST['submit']))
+            if(isset($_POST['submit1']))
             {
                 $ten_kh = $_POST['ten_kh'];
                 $email = $_POST['email'];
@@ -118,7 +117,7 @@
                             <input type="text" id="diachi" placeholder="Địa chỉ" name="diachi">
                         </div>
                         <div class="recaptcha form-control1">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</div>
-                        <input type="submit" class="submit" value="Đăng ký" name="submit">
+                        <input type="submit" class="submit" value="Đăng ký" name="submit1">
                         </input>
                         <div class="backto">
                             <a href="../LaptrinhWeb/View/index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
