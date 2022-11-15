@@ -9,7 +9,7 @@
             $_SESSION['giohang'] = array();
         }
         $sach = array(
-            "idsachtronggiohang" => count($_SESSION['giohang']),
+            "idsachtronggiohang" => count($_SESSION['giohang']), 
             "id_sach" => $_POST['id_sach'],
             "ten_sach" => $_POST['ten_sach'],
             "hinhanh" => $_POST['hinhanh'],
