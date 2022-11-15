@@ -1,7 +1,7 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Class/Khachhang.php");
-    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/db_module.php");
-    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Model/Validate.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Model/Class/Khachhang.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/db_module.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Model/Validate.php");
 
     function dangki($link, $ten_kh, $matkhau, $sdt, $diachi, $email)
     {

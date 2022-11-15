@@ -1,3 +1,9 @@
+<?php
+                                // unset($_SESSION['email']);
+                                if(!isset($_SESSION['email'])) 
+                                header("Location: signin.php");
+                            ?>
+
 <!DOCTYPE html>
 
 <head>
@@ -67,10 +73,6 @@
                     <div class="card mb-4">
                         <div class="card-header">Tài khoản</div>
                         <div class="card-body">
-                            <?php
-                                if(!isset($_SESSION['email']))
-                                header("Location: signin.php")
-                            ?>
                             <form>
                                 <!-- Form Group (username)-->
                                 <div class="mb-3">
@@ -87,8 +89,6 @@
                               
                                         <label class="small mb-1" for="inputphone1">Số điện thoại 1</label>
                                         <input class="form-control" id="inputphone1" type="text" placeholder="Nhập số điện thoại liên hê" value="">
-                              
-                                   
                                 </div>
 
                                 <div class=" mb-3">
