@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 12, 2022 lúc 10:52 PM
+-- Thời gian đã tạo: Th10 15, 2022 lúc 01:59 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -24,6 +24,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `donhang`
+--
+
+CREATE TABLE `donhang` (
+  `id_donhang` int(11) NOT NULL,
+  `id_kh` int(11) NOT NULL,
+  `id_sach` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `soluong` int(11) DEFAULT NULL,
+  `thoigian` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `donhang`
+--
+
+INSERT INTO `donhang` (`id_donhang`, `id_kh`, `id_sach`, `soluong`, `thoigian`) VALUES
+(1, 1, 'SP001', 2, '2022-11-12 23:49:06'),
+(2, 2, 'SP005', 4, '2022-11-12 23:49:06'),
+(3, 3, 'SP006', 6, '2022-11-12 23:49:06'),
+(4, 4, 'SP007', 8, '2022-11-12 23:49:06'),
+(5, 5, 'SP009', 9, '2022-11-12 23:49:06');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `khachhang`
+--
+
+CREATE TABLE `khachhang` (
+  `id_kh` int(11) NOT NULL,
+  `ten_kh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `matkhau` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sdt` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(8000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`id_kh`, `ten_kh`, `matkhau`, `sdt`, `diachi`, `email`) VALUES
+(1, 'Nguyễn Văn A', '12345678', '0123456789', 'Hà Giang', 'nva@gmail.com'),
+(2, 'Nguyễn Văn B', '12345678', '0289999999', 'Hà Nội', 'nvb@gmail.com'),
+(3, 'Đỗ Thị Phương Anh', '12345678', '0335991355', 'Thanh Hóa', 'anhdo@gmail.com'),
+(4, 'Nông Thảo Hiền', '12345678', '0333333333', 'Tiền Giang', 'hiennong@gmail.com'),
+(5, 'Đặng Thị Kim Ngân', '12345678', '0555555555', 'TP.HCM', 'ngandang@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -371,10 +418,16 @@ INSERT INTO `theloai` (`id_theloai`, `ten_theloai`) VALUES
 --
 -- Chỉ mục cho bảng `donhang`
 --
+ALTER TABLE `donhang`
+  ADD PRIMARY KEY (`id_donhang`),
+  ADD KEY `FK_DH_SP` (`id_sach`),
+  ADD KEY `FK_DH_KH` (`id_kh`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
 --
+ALTER TABLE `khachhang`
+  ADD PRIMARY KEY (`id_kh`);
 
 --
 -- Chỉ mục cho bảng `motasach`
@@ -410,12 +463,31 @@ ALTER TABLE `theloai`
   ADD PRIMARY KEY (`id_theloai`);
 
 --
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `donhang`
+--
+ALTER TABLE `donhang`
+  MODIFY `id_donhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT cho bảng `khachhang`
+--
+ALTER TABLE `khachhang`
+  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- Các ràng buộc cho các bảng đã đổ
 --
 
 --
 -- Các ràng buộc cho bảng `donhang`
 --
+ALTER TABLE `donhang`
+  ADD CONSTRAINT `FK_DH_KH` FOREIGN KEY (`id_kh`) REFERENCES `khachhang` (`id_kh`),
+  ADD CONSTRAINT `FK_DH_SP` FOREIGN KEY (`id_sach`) REFERENCES `sach` (`id_sach`);
 
 --
 -- Các ràng buộc cho bảng `motasach`
