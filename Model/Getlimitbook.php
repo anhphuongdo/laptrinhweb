@@ -28,7 +28,7 @@
             }
             giaiPhongBoNho($link, $result);
             return $data;
-        }
+        } 
         public function getbooklist_theotheloai($name){
             $link = null;
             taoketnoi($link);

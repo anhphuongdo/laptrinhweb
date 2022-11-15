@@ -126,7 +126,7 @@
                         <input type="submit" class="submit" value="Đăng ký" name="submit">
                         </input>
                         <div class="backto">
-                            <a href="index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
+                            <a href="./index.php"><i class="fa fa-long-arrow-alt-left"></i> Quay lại trang chủ</a>
                         </div>
                     </form>
                 </div>
