@@ -13,7 +13,7 @@
         }
         else
         {
-            giaiPhongBoNho($link, true);
+/*             giaiPhongBoNho($link, true); */
             echo "unvalid";
         }
     }
