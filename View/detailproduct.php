@@ -100,10 +100,12 @@
         </div>
         <div class="row product-list">
             <?php
-                require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/IndexController.php");
-                $controller = new IndexController();
-                $controller -> tl_limit_invoke("Sách kinh tế");
-                ?>
+                if(isset($_GET['pro_id'])){
+                    require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/ChitietsachController.php");
+                    $controller = new ChitietsachController();
+                    $controller -> tl_limit_invoke($_GET['pro_id']);
+                }
+            ?>
             </div>
         </div>
     </div>
