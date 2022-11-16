@@ -1,5 +1,4 @@
 <html>
-
 <body>
     <?php
     foreach($motas as $mota){
@@ -39,7 +38,7 @@
                             <span id='ID'>ID: ".$book -> get_id_sach()."</span>
                         </div>
                         <div class='product-price' id='price-priview'><span class='pro-price'> Đơn giá: " .number_format((int)$book->get_giatien(), 0, ",", "."). " VNĐ</span></div>
-                        <form id='add-item-form' action='/card/add' method='post' class='variants clearfix'>
+                        <form id='add-item-form' action='../Controller/GiohangController.php' method='post' class='variants clearfix'>
                             <div class='select-actions'>
                                 <div class='center1>
                                     <p></p>
@@ -55,10 +54,10 @@
                                 <div class='wrap-addcart clearfix'>
                                     <div class='row-flex'>
                                         <div class='col-xs-6 col-md-6'>
-                                            <button type='button' class='button btn-addtocart addtocart-modal'>Add to cart</button>
+                                            <button type='submit' class='button btn-addtocart addtocart-modal' name='GiohangController' value='themvaogiohang'>Add to cart</button>
                                         </div>
                                         <div class='col-xs-6 col-md-6'>
-                                            <button type='button' class='buy-now button' style='display: block;'>Buy now</button>
+                                            <button type='submit' class='buy-now button' style='display: block;' name='GiohangController' value='muangay'>Buy now</button>
                                         </div>
                                     </div>
                                 </div>

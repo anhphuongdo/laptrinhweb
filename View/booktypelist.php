@@ -82,7 +82,7 @@
     </div>
     <div class="row product-list">
       <?php
-      require_once("../Controller/DanhsachController.php");
+      require_once($_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/Controller/DanhsachController.php");
       $controller = new DanhsachController();
       $controller->tl_invoke($_GET['tl']);
       ?>

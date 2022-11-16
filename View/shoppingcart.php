@@ -1,5 +1,11 @@
+<?php
+  session_start();
+  require_once("../db_module.php");
+  require_once("../cart_module.php");
+  $link = NULL;
+  taoKetNoi($link);
+  ?>
 <html>
-
 <head>
   <title>Giỏ hàng</title>
   <meta charset="utf-8">
@@ -65,131 +71,100 @@
         <div class="card-header">
           <h2>Giỏ hàng</h2>
         </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered m-0">
-              <thead>
-                <tr>
-                  <th class="text-center py-3 px-4" style="min-width: 400px;"> Sản phẩm</th>
-                  <th class="text-center py-3 px-4" style="width: 100px;">Giá</th>
-                  <th class="text-center py-3 px-4" style="width: 120px;">Số Lượng </th>
-                  <th class="text-center py-3 px-4" style="width: 100px;">Tổng</th>
-                  <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td class="p-4">
-                    <div class="media align-items-center">
-                      <img src="image/vimo.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
-                      <div class="media-body">
-                        <a href="#" class="d-block text-dark">Tên sản phẩm</a>
-                        <small>
-                          <span class="text-muted">Chi tiết sản phẩm: </span> Nội dung &nbsp;
-                        </small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-right font-weight-semibold align-middle p-4">200,000 VNĐ</td>
-                  <td class="align-middle p-4"><input type="text" class="form-control text-center" value="2"></td>
-                  <td class="text-right font-weight-semibold align-middle p-4">400,000 VNĐ</td>
-                  <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
-                </tr>
-
-                <tr>
-                  <td class="p-4">
-                    <div class="media align-items-center">
-                      <img src="image/vimo.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
-                      <div class="media-body">
-                        <a href="#" class="d-block text-dark">Tên sản phẩm</a>
-                        <small>
-                          <span class="text-muted">Chi tiết sản phẩm: </span> Nội dung &nbsp;
-                        </small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-right font-weight-semibold align-middle p-4">150,000 VNĐ</td>
-                  <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
-                  <td class="text-right font-weight-semibold align-middle p-4">150,000 VNĐ</td>
-                  <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
-                </tr>
-
-                <tr>
-                  <td class="p-4">
-                    <div class="media align-items-center">
-                      <img src="image/vimo.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
-                      <div class="media-body">
-                        <a href="#" class="d-block text-dark">Tên sản phẩm</a>
-                        <small>
-                          <span class="text-muted">Chi tiết sản phẩm: </span> Nội dung &nbsp;
-                        </small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-right font-weight-semibold align-middle p-4">240,000 VNĐ</td>
-                  <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
-                  <td class="text-right font-weight-semibold align-middle p-4">240,000 VNĐ</td>
-                  <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-          <!-- / Shopping cart table -->
-
-          <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
-            <div class="d-flex">
-              <div class="text-right mt-4">
-                <label class="text-muted font-weight-normal m-0">Tổng thanh toán</label>
-                <div class="text-large"><strong>740,000 VNĐ</strong></div>
+          <div class='card-body'>
+            <div class='table-responsive'>
+              <table class='table table-bordered m-0'>
+                <thead>
+                  <tr>
+                    <th class='text-center py-3 px-4' style='min-width: 400px;'> Sản phẩm</th>
+                    <th class='text-center py-3 px-4' style='width: 100px;'>Giá</th>
+                    <th class='text-center py-3 px-4' style='width: 120px;'>Số Lượng </th>
+                    <th class='text-center py-3 px-4' style='width: 100px;'>Tổng</th>
+                    <th class='text-center align-middle py-3 px-0' style='width: 40px;'><a href='#' class='shop-tooltip float-none text-light' title='' data-original-title='Clear cart'><i class='ino ion-md-trash'></i></a></th>
+                  </tr>
+                </thead>
+                <?php
+                if(isset($_SESSION['giohang'])){
+                  $giohang = $_SESSION['giohang'];
+                  foreach($giohang as $k => $v){
+                  echo "
+                  <tbody>
+                    <tr>
+                      <td class='p-4'>
+                        <div class='media align-items-center'>
+                          <img src='".$v['hinhanh']."' class='d-block ui-w-40 ui-bordered mr-4' alt=''>
+                          <div class='media-body'>
+                            <a href='#' class='d-block text-dark'>".$v['ten_sach']."</a>
+                            <small>
+                              <span class='text-muted'>Chi tiết sản phẩm: </span> Nội dung &nbsp;
+                            </small>
+                          </div>
+                        </div>
+                      </td>
+                      <td class='text-right font-weight-semibold align-middle p-4'>".number_format((int)$v['giatien'], 0, ",", ".")." VNĐ</td>
+                      <td class='align-middle p-4'><input type='text' class='form-control text-center' value='".$v['soluong']."'></td>
+                      <td class='text-right font-weight-semibold align-middle p-4'>".number_format((int)$_SESSION['tongtiensach'], 0, ",", ".")." VNĐ</td>
+                      <td class='text-center align-middle px-0'><button type='submit' name='GiohangController' value='xoahang' class='shop-tooltip close float-none text-danger' title='' data-original-title='Remove'>×</button></td>
+                    </tr>
+                  </tbody>";
+                  }
+                }
+                ?>
+              </table>
+            </div>
+            <!-- / Shopping cart table -->
+            <?php
+            echo 
+            "<div class='d-flex flex-wrap justify-content-between align-items-center pb-4'>
+              <div class='d-flex'>
+                <div class='text-right mt-4'>
+                  <label class='text-muted font-weight-normal m-0'>Tổng thanh toán</label>
+                  <div class='text-large'><strong>" . (isset($_SESSION['giohang']) ? xemgiohang() : "0") . "</strong></div>
+                </div>
               </div>
+            </div>";
+            ?>
+  
+            <div class='button' id='buttons'>
+              <a href='index.php' class='btn blue'>Quay về trang chủ</a>
+              <a href='#' class='btn green'>Xác nhận</a>
             </div>
           </div>
-
-          <div class="button" id="buttons">
-            <a href="index.php" class="btn blue">Quay về trang chủ</a>
-            <a href="#" class="btn green">Xác nhận</a>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-      <div class="footer row text-center">
-        <div class="col-md-4">
-          <hr class="light" />
-          <h5> Giới thiệu</h5>
-          <hr class="light" />
-          <p>Vài dòng giới thiệu</p>
-        </div>
-        <div class="col-md-4">
-          <hr class="light" />
-          <h5> Founder:</h5>
-          <hr class="light" />
-          <p>Đỗ Thị Phương Anh</p>
-          <p>Nông Thảo Hiền</p>
-          <p>Đặng Thị Kim Ngân</p>
-        </div>
-        <div class="col-md-4">
-          <hr class="light" />
-          <h5> Liên hệ</h5>
-          <hr class="light" />
-          <p>Phone-number</p>
-          <p>Address</p>
-          <p>Email</p>
-        </div>
-        <div class="col-12">
-          <hr class="light-100">
-          <p>Đây là sản phẩm mô phỏng phục vụ cho môn học của sinh viên</p>
-          <h5>&copy; Đại học Kinh tế Thành phố Hồ Chí Minh, 2022</h5>
-        </div>
       </div>
     </div>
-
+<?php
+ giaiPhongBoNho($link, $result);
+?>
+    <div class="footer row text-center">
+      <div class="col-md-4">
+        <hr class="light" />
+        <h5> Giới thiệu</h5>
+        <hr class="light" />
+        <p>Vài dòng giới thiệu</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light" />
+        <h5> Founder:</h5>
+        <hr class="light" />
+        <p>Đỗ Thị Phương Anh</p>
+        <p>Nông Thảo Hiền</p>
+        <p>Đặng Thị Kim Ngân</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light" />
+        <h5> Liên hệ</h5>
+        <hr class="light" />
+        <p>Phone-number</p>
+        <p>Address</p>
+        <p>Email</p>
+      </div>
+      <div class="col-12">
+        <hr class="light-100">
+        <p>Đây là sản phẩm mô phỏng phục vụ cho môn học của sinh viên</p>
+        <h5>&copy; Đại học Kinh tế Thành phố Hồ Chí Minh, 2022</h5>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

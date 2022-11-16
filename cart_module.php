@@ -1,4 +1,5 @@
 <?php
+    session_start();
     function taoTonggiatien()
     {
         if(isset($_SESSION['giohang']))
@@ -58,44 +59,52 @@
             taoTonggiatien();
         }
         taoTonggiatien();
+    }
 
-        function capnhatgiohang($quantity)
+    function capnhatgiohang($quantity)
+    {
+        if(isset($_SESSION['giohang']))
         {
-            if(isset($_SESSION['giohang']))
+            $giohang = $_SESSION['giohang'];
+            foreach($quantity as $idsachtronggiohang => $tongsosach)
             {
-                $giohang = $_SESSION['giohang'];
-                foreach($quantity as $idsachtronggiohang => $tongsosach)
-                {
-                    $giohang[$idsachtronggiohang]['soluong'] = $tongsosach;
-                    $giohang[$idsachtronggiohang]['tongtiensach'] = $giohang[$idsachtronggiohang]['soluong'] * $giohang[$idsachtronggiohang]['giatien'];
-                }
-                $_SESSION['giohang'] = $giohang;
-                taoTonggiatien();
+                $giohang[$idsachtronggiohang]['soluong'] = $tongsosach;
+                $giohang[$idsachtronggiohang]['tongtiensach'] = $giohang[$idsachtronggiohang]['soluong'] * $giohang[$idsachtronggiohang]['giatien'];
             }
+            $_SESSION['giohang'] = $giohang;
+            taoTonggiatien();
         }
+    }
 
-        function lamtronggiohang()
+    function lamtronggiohang()
+    {
+        if(isset($_SESSION['giohang']))
         {
-            if(isset($_SESSION['giohang']))
-            {
-                unset($_SESSION['giohang']);
-                unset($_SESSION['tongtiensach']);
-            }
+            unset($_SESSION['giohang']);
+            unset($_SESSION['tongtiensach']);
         }
+    }
 
-        function xemgiohang()
+    function xemgiohang()
+    { 
+        $sum = 0;
+        if( isset($_SESSION['giohang']))
         {
-            $sum = 0;
-            if( isset($_SESSION['giohang']))
+            $giohang = $_SESSION['giohang'];
+            foreach($giohang as $v)
             {
-                $giohang = $_SESSION['giohang'];
-                foreach($giohang as $value)
-                {
-                    $sum += $value['soluong'] * $value['giatien'];
-                }
-                return number_format($sum);
+                $sum += $v['soluong'] * $v['giatien'];
             }
+            return number_format($sum);
         }
+    }
+    function xoahang($key){
+        if(isset($_SESSION['giohang'])){
+            $giohang = $_SESSION['giohang'];
+            unset($giohang[$key]);
+            $_SESSION['giohang'] = $giohang;
+        }
+        taoTonggiatien();
     }
 
 ?>

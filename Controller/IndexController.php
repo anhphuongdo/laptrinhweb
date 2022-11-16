@@ -12,4 +12,4 @@
             include $_SERVER['DOCUMENT_ROOT']."/LaptrinhWeb/View/index_view.php";
         }
     }
-?>  
+?>   

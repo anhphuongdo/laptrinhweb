@@ -1,5 +1,9 @@
 <?php
-    include_once("cart_module.php");
+    session_start();    
+    require_once("../db_module.php");
+    require_once("../cart_module.php");
+    $link = NULL;
+    taoKetNoi($link);
 
     if(isset($_POST['GiohangController']))
     {
@@ -14,26 +18,27 @@
             "ten_sach" => $_POST['ten_sach'],
             "hinhanh" => $_POST['hinhanh'],
             "giatien" => $_POST['giatien'],
-            "soluong" => $_POST['soluong'],
-            "soluongmax" => $_POST['soluongmax'],
+            "soluong" => 1,
             "tongtiensach" => $tongtiensach
         );
-
-        if(isset($_POST['GiohangController']))
+    }
+    if(isset($_POST['GiohangController']))
         {
             switch($_POST['GiohangController'])
             {
                 case "themvaogiohang":
                     themvaogiohang($sach);
-                    header("Location: ../View/");
+                    header("Location: ../View/detailproduct.php?pro_id=".$_GET['id_sach']);
                     break;
                 case "muangay":
                     themvaogiohang($sach);
-                    header("Location: ../View/giohang.php/index.php");
+                    header("Location: ../View/shoppingcart.php");
                     break;
+                case "xoahang":
+                    xoahang($key);
+                    header("Location: ../View/shoppingcart.php");
                 default:
                     break;
             }
         }
-    }
 ?>

@@ -349,6 +349,10 @@
   -webkit-align-items: center;
   align-items: center;
 }
+a.tocart{
+  color: white;
+  text-decoration: none;
+}
 button.buy-now,
 button.btn-addtocart {
   font-size: 12px;
@@ -926,7 +930,23 @@ button.btn-addtocart:active {
   border: 1px solid #000000;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 782px) {
+  nav ul li a span{
+		color: #000000;
+    display: block !important;
+    font-size: 10px;
+    margin:auto;
+	}
+	nav ul li a{
+    font-size: 10px;
+    width: fit-content;
+	}
+  nav span{
+    font-size: 10px;
+  }
+  nav img{
+    width: 75px;
+  }
   .content .signin  {
     width: 100%;
     display: -webkit-box;
