@@ -9,7 +9,7 @@
         }
 
         public function invoke($id)
-        {
+        { 
             $books = $this->model->getbook();
             $motas = $this->model->getmota();
             $tacgias = $this->model->gettacgia();

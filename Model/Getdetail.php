@@ -8,7 +8,7 @@
     class Getdetail{
         public function getmota(){
             $link = null;
-            taoKetNoi($link);
+            taoKetNoi($link); 
             $result = chayTruyVanTraVeDL($link, "select * from motasach");
             $data = array();
             while($rows = mysqli_fetch_assoc($result))
